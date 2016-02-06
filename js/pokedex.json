@@ -67,29 +67,6 @@ var data = [
       },
 
       {
-        dex_num: 3,
-        name: "Venusaur",
-        types: [
-          "Grass",
-          "Poison"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          1,
-          2,
-          3
-        ],
-        base_hp: 80,
-        base_atk: 82,
-        base_def: 83,
-        base_spatk: 100,
-        base_spdef: 50,
-        base_speed: 80,
-        isCaught: false
-
-      },
-
-      {
         dex_num: 4,
         name: "Charmander",
         types: [

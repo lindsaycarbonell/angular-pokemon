@@ -41,7 +41,7 @@
 
     <tr ng-repeat="pokemon in main.pokemon">
       <td>{{pokemon.name}}</td>
-      <td>{{pokemon.types}}</td>
+      <td>{{ main.printTypes(pokemon.types) }}</td>
       <td>{{pokemon.location}}</td>
       <td>{{pokemon.evolut_chain}}</td>
       <td>{{pokemon.base_hp}}</td>
