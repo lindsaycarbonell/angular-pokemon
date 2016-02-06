@@ -1,3 +1,10 @@
+var app = angular.module('mainApp',[]);
+
+app.controller('MainController',function() {
+
+this.message = "hello";
+
+
 var data = [
     {
         dex_num: 1,
@@ -222,3 +229,10 @@ var data = [
 
       }
 ]
+
+this.pokemon = data;
+
+
+
+
+});
