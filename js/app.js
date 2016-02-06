@@ -2,6 +2,7 @@ var app = angular.module('mainApp',['ngSanitize']);
 
 app.controller('MainController',function() {
 
+
 this.message = "hello";
 
 
@@ -134,7 +135,7 @@ var totalType = "";
       if(givenType.localeCompare(compareType)==0){
         console.log("This pokemon is a " + allTypes[j] + " type.");
         console.log("The color for this Pokemon is " + allColors[j] + ".");
-        totalType += "<div style='background-color:" + allColors[j] + ";'>" + allTypes[j] + "</div>";
+        totalType += "<div style='font-style:bold;background-color:" + allColors[j] + ";'>" + allTypes[j] + "</div>";
       }
     }
 
