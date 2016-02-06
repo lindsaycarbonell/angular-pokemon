@@ -1,4 +1,4 @@
-var app = angular.module('mainApp',[]);
+var app = angular.module('mainApp',['ngSanitize']);
 
 app.controller('MainController',function() {
 
@@ -48,6 +48,28 @@ var data = [
         base_speed: 100,
         isCaught: false
 
+      },
+
+      {
+        dex_num: 7,
+        name: "Squirtle",
+        types: [
+          "Water"
+        ],
+        location: "unknown",
+        evolut_chain: [
+          7,
+          8,
+          9
+        ],
+        base_hp: 44,
+        base_atk: 48,
+        base_def: 65,
+        base_spatk: 50,
+        base_spdef: 64,
+        base_speed: 43,
+        isCaught: false
+
       }
 
 ]
@@ -55,28 +77,90 @@ var data = [
 
 this.pokemon = data;
 
-this.printTypes = function(pokeTypes){
-  var printedType = "";
-  console.log("print types: " + pokeTypes);
+this.printTypes = function(givenTypes){
 
-  for(var i=0; i<pokeTypes.length; i++){
-    thisType = pokeTypes[i];
-    if(thisType=="Fire"){
-      printedType += "Fire";
-    }
-    else if(thisType=="Water") {
-      printedType += "Water";
-    }
-    else if(thisType=="Flying"){
-      printedType += "Flying";
-    }
-    else if(thisType == "Grass"){
-      printedType += "Grass";
+  var allTypes = [
+    "Normal",
+    "Fire",
+    "Water",
+    "Electric",
+    "Grass",
+    "Ice",
+    "Fighting",
+    "Poison",
+    "Ground",
+    "Flying",
+    "Psychic",
+    "Bug",
+    "Rock",
+    "Ghost",
+    "Dragon",
+    "Dark",
+    "Steel"
+  ];
+
+//colors from Bulbapedia
+  var allColors = [
+      "#A8A878",
+      "#F08030",
+      "#6890F0",
+      "#F8D030",
+      "#78C850",
+      "#98D8D8",
+      "#C03028",
+      "#A040A0",
+      "#E0C068",
+      "#A890F0",
+      "#F85888",
+      "#A8B820",
+      "#B8A038",
+      "#705898",
+      "#7038F8",
+      "#705848",
+      "#B8B8D0"
+  ];
+
+var totalType = "";
+
+  //loop through given array of types
+  for(var i=0; i<givenTypes.length; i++){
+
+    //loop through all possible types
+    for(var j=0; j<allTypes.length; j++){
+      givenType = givenTypes[i];
+      compareType = allTypes[j];
+
+      //if you find a match in the all possible types array...
+      if(givenType.localeCompare(compareType)==0){
+        console.log("This pokemon is a " + allTypes[j] + " type.");
+        console.log("The color for this Pokemon is " + allColors[j] + ".");
+        totalType += "<div style='background-color:" + allColors[j] + ";'>" + allTypes[j] + "</div>";
+      }
     }
 
-
-    return printedType;
   }
+
+  return totalType;
+
+
+
+//now we create and style the types
+// var totalType = "";
+//
+//   for(var i=0; i<givenTypes.length; i++){
+//     thisType = givenTypes[i];
+//
+//     if (numOfTypes == 1){
+//       totalType = givenTypes[0];
+//     }
+//     else if(numOfTypes == 2){
+//
+//       totalType = givenTypes[0] + "/" + givenTypes[1];
+//     }
+//
+//   }
+
+
 
 }
 

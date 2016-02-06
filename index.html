@@ -9,7 +9,7 @@
 <!--angular js-->
 <script src="js/angular.js"></script>
 <script src="js/app.js"></script>
-
+<script src="js/angular-sanitize.min.js"></script>
 
 <!--bootstrap-->
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 
     <tr ng-repeat="pokemon in main.pokemon">
       <td>{{pokemon.name}}</td>
-      <td>{{ main.printTypes(pokemon.types) }}</td>
+      <td ng-bind-html="main.printTypes(pokemon.types)"></td>
       <td>{{pokemon.location}}</td>
       <td>{{pokemon.evolut_chain}}</td>
       <td>{{pokemon.base_hp}}</td>
