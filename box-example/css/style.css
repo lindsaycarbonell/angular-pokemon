@@ -1,0 +1,99 @@
+body {
+  background: #fff;
+  font-weight: 200;
+  font-family: "Helvetica Neue";
+  padding: 20px;
+}
+
+.building {
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.building h3 {
+  margin-top: 0;
+}
+
+form {
+  padding: 20px 0;
+  border: none !important;
+}
+
+input, textarea, select {
+  margin-bottom: 10px;
+}
+
+.box {
+  height: 100px;
+  width: 120px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  text-align: center;
+  color: #fff;
+  display: table;
+  cursor: pointer;
+  background-color: #888;
+  transition: all 0.5s;
+}
+
+.box p {
+  padding: 0;
+  margin: 0;
+}
+
+.ng-dirty.ng-valid {
+  border: 1px solid #25A24E;
+}
+
+.ng-dirty.ng-invalid {
+  border: 1px solid #FF4449;
+}
+
+.space-top {
+ margin-top: 45px;
+}
+
+.box:hover {
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.vert-centered {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.blue {
+  background: #2B84D2;
+}
+
+.yellow {
+  background: #FBA922;
+}
+
+.green {
+  background: #25A24E;
+}
+
+.purple {
+  background: #A36AC7;
+}
+
+.orange {
+  background: #F96A38;
+}
+
+.red {
+  background: #FF4449;
+}
+
+.black {
+  background: #333;
+}

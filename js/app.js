@@ -78,6 +78,9 @@ var data = [
 
 this.pokemon = data;
 
+//printTypes takes the types for a given pokemon and prints out
+//the stylized type boxes into the Pokedex table
+
 this.printTypes = function(givenTypes){
 
   var allTypes = [
@@ -131,10 +134,11 @@ var totalType = "";
       givenType = givenTypes[i];
       compareType = allTypes[j];
 
-      //if you find a match in the all possible types array...
+      //if you find a match in the all possible types array add it to TotalType
+      //with the proper color from allColors
       if(givenType.localeCompare(compareType)==0){
-        console.log("This pokemon is a " + allTypes[j] + " type.");
-        console.log("The color for this Pokemon is " + allColors[j] + ".");
+        // console.log("This pokemon is a " + allTypes[j] + " type.");
+        // console.log("The color for this Pokemon is " + allColors[j] + ".");
         totalType += "<div style='font-style:bold;background-color:" + allColors[j] + ";'>" + allTypes[j] + "</div>";
       }
     }
@@ -142,24 +146,6 @@ var totalType = "";
   }
 
   return totalType;
-
-
-
-//now we create and style the types
-// var totalType = "";
-//
-//   for(var i=0; i<givenTypes.length; i++){
-//     thisType = givenTypes[i];
-//
-//     if (numOfTypes == 1){
-//       totalType = givenTypes[0];
-//     }
-//     else if(numOfTypes == 2){
-//
-//       totalType = givenTypes[0] + "/" + givenTypes[1];
-//     }
-//
-//   }
 
 
 

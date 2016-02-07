@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="boxes">
+<head>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="js/app.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body ng-controller="BoxController as boxCtrl">
+  <div class="building" ng-repeat="building in boxCtrl.buildings">
+    <h3>{{ building.name }}</h3>
+    <p>{{ building.description }}</p>
+    <div ng-repeat="box in building.boxes" ng-class="['box',box.color]">
+      <div class="vert-centered">
+        <p>{{box.name}}</p>
+        <p>{{box.face}}</p>
+      </div>
+    </div>
+  </div>
+
+  <form name="boxForm" novalidate>
+
+    <select ng-model="boxCtrl.newBox.building_id" class="form-control" required>
+      <option value="">Select a Building</option>
+      <option ng-repeat="building in boxCtrl.buildings" value="{{ $index }}">{{ building.name }}</option>
+    </select>
+
+    <input ng-model="boxCtrl.newBox.name" class="form-control" type="text" placeholder="Box Name" required />
+
+    <select ng-model="boxCtrl.newBox.color" class="form-control" required>
+      <option value="">Select a Color</option>
+      <option ng-repeat="col in boxCtrl.availableColors" value="{{col}}">{{ col | titlecase }}</option>
+    </select>
+
+    <input ng-model="boxCtrl.newBox.face" class="form-control" type="text" placeholder="Box Face :)" required />
+
+  </form>
+
+  <div ng-click="boxForm.$valid && boxCtrl.addBox()" ng-show="boxCtrl.shouldBeVisible()" ng-class="['preview','box',boxCtrl.newBox.color]">
+    <div class="vert-centered">
+      <p>{{boxCtrl.newBox.name}}</p>
+      <p>{{boxCtrl.newBox.face}}</p>
+    </div>
+  </div>
+
+  <p class="space-top" ng-show="boxForm.$valid"><i class="glyphicon glyphicon-ok-circle"></i> Click the box to add</p>
+
+</body>
+</html>
