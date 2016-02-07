@@ -16,7 +16,7 @@
 <!--font awesome-->
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <!--my stylesheet-->
-<!-- <link rel="stylesheet" href="css/style.css" /> -->
+<link rel="stylesheet" href="css/style.css" />
 
 
 </head>
@@ -27,6 +27,7 @@
 
   <table class="table">
     <thead>
+      <th></th>
       <th>Name</th>
       <th>Types</th>
       <th>Location</th>
@@ -40,10 +41,12 @@
     </thead>
 
     <tr ng-repeat="pokemon in main.pokemon">
+      <!--sprites from pokestadium.com-->
+      <td><img ng-src="assets/{{pokemon.dex_num}}.gif" /></td>
       <td>{{pokemon.name}}</td>
       <td ng-bind-html="main.printTypes(pokemon.types)"></td>
       <td>{{pokemon.location}}</td>
-      <td>{{pokemon.evolut_chain}}</td>
+      <td ng-bind-html="main.printEvolut(pokemon.evolut_chain)"></td>
       <td>{{pokemon.base_hp}}</td>
       <td>{{pokemon.base_atk}}</td>
       <td>{{pokemon.base_def}}</td>

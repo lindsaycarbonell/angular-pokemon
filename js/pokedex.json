@@ -1,9 +1,9 @@
-var data = [
+[
     {
         dex_num: 1,
         name: "Bulbasaur",
         types: [
-          "Grass"
+          "grass"
         ],
         location: "unknown",
         evolut_chain: [
@@ -24,8 +24,8 @@ var data = [
         dex_num: 2,
         name: "Ivysaur",
         types: [
-          "Grass",
-          "Poison"
+          "grass",
+          "poison"
         ],
         location: "unknown",
         evolut_chain: [
@@ -47,8 +47,8 @@ var data = [
         dex_num: 3,
         name: "Venusaur",
         types: [
-          "Grass",
-          "Poison"
+          "grass",
+          "poison"
         ],
         location: "unknown",
         evolut_chain: [
@@ -70,7 +70,7 @@ var data = [
         dex_num: 4,
         name: "Charmander",
         types: [
-          "Fire"
+          "fire"
         ],
         location: "unknown",
         evolut_chain: [
@@ -92,7 +92,7 @@ var data = [
         dex_num: 5,
         name: "Charmeleon",
         types: [
-          "Fire"
+          "fire"
         ],
         location: "unknown",
         evolut_chain: [
@@ -114,8 +114,8 @@ var data = [
         dex_num: 6,
         name: "Charizard",
         types: [
-          "Fire",
-          "Flying"
+          "fire",
+          "flying"
         ],
         location: "unknown",
         evolut_chain: [
@@ -137,7 +137,7 @@ var data = [
         dex_num: 7,
         name: "Squirtle",
         types: [
-          "Water"
+          "water"
         ],
         location: "unknown",
         evolut_chain: [
@@ -159,7 +159,7 @@ var data = [
         dex_num: 8,
         name: "Wartortle",
         types: [
-          "Water"
+          "water"
         ],
         location: "unknown",
         evolut_chain: [
@@ -181,7 +181,7 @@ var data = [
         dex_num: 9,
         name: "Blastoise",
         types: [
-          "Water"
+          "water"
         ],
         location: "unknown",
         evolut_chain: [

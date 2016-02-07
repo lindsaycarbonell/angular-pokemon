@@ -1,0 +1,22 @@
+{
+    dex_num: 1,
+    name: "Bulbasaur",
+    n_name: "Bulby",
+    currentLevel: 14,
+    types: [
+      "Grass"
+    ],
+    location: "unknown",
+    evolut_chain: [
+        1,
+        2,
+        3
+    ],
+    base_hp: 45,
+    base_atk: 49,
+    base_def: 49,
+    base_spdef: 65,
+    base_spatk: 65,
+    base_speed: 45,
+    inTeam: true
+  },
