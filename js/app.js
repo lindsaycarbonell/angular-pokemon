@@ -216,7 +216,7 @@ this.pokemon = data;
 //the stylized type boxes into the Pokedex table
 
 this.printTypes = function(givenTypes){
-console.log("print types");
+// console.log("print types");
   var allTypes = [
     "normal",
     "fire",
@@ -267,7 +267,7 @@ var totalType = "";
 }
 
 this.printEvolut = function(givenDexNums){
-console.log("print evolut");
+// console.log("print evolut");
 
 
 var totalEvolut = "";
@@ -277,7 +277,7 @@ var totalEvolut = "";
   for(var i=0; i<givenDexNums.length; i++){
 
     this.nextDexNum = givenDexNums[i];
-    console.log(this.nextDexNum);
+    // console.log(this.nextDexNum);
 
     totalEvolut += "<p>" + this.pokemon[this.nextDexNum-1].name + "</p>";
 
@@ -290,5 +290,13 @@ var totalEvolut = "";
 
 
 }
+
+this.setSort = function(columnName){
+  console.log("setSort");
+        if (this.sort === columnName){
+          this.direction = !this.direction;
+        }
+        this.sort = columnName;
+      }
 
 });

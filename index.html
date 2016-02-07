@@ -28,19 +28,19 @@
   <table class="table">
     <thead>
       <th></th>
-      <th>Name</th>
+      <th ng-click="main.setSort('name')">Name</th>
       <th>Types</th>
-      <th>Location</th>
+      <th ng-click="main.setSort('location')">Location</th>
       <th>Evolutionary Chain</th>
-      <th>Base HP</th>
-      <th>Base Attack</th>
-      <th>Base Defense</th>
-      <th>Base Special Defense</th>
-      <th>Base Special Attack</th>
-      <th>Base Speed</th>
+      <th ng-click="main.setSort('base_hp')">Base HP</th>
+      <th ng-click="main.setSort('base_atk')">Base Attack</th>
+      <th ng-click="main.setSort('base_def')">Base Defense</th>
+      <th ng-click="main.setSort('base_spdef')">Base Special Defense</th>
+      <th ng-click="main.setSort('base_spatk')">Base Special Attack</th>
+      <th ng-click="main.setSort('base_speed')">Base Speed</th>
     </thead>
 
-    <tr ng-repeat="pokemon in main.pokemon">
+    <tr ng-repeat="pokemon in main.pokemon | orderBy:main.sort:main.direction">
       <!--sprites from pokestadium.com-->
       <td><img ng-src="assets/{{pokemon.dex_num}}.gif" /></td>
       <td>{{pokemon.name}}</td>
