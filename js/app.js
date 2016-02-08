@@ -3,10 +3,40 @@ var app = angular.module('mainApp',['ngSanitize']);
 app.controller('MainController',function() {
 
 
-this.message = "hello";
+
+var caughtPokemonData = [
+{
+    dex_num: 1,
+    name: "Bulbasaur",
+    n_name: "Bulby",
+    current_lvl: 14,
+    types: [
+      "grass"
+    ],
+    location: "unknown",
+    evolut_chain: [
+        1,
+        2,
+        3
+    ],
+    move_set: [
+      "Tackle",
+      "Growl",
+      "Leech Seed",
+      "Vine Whip"
+    ],
+    base_hp: 45,
+    base_atk: 49,
+    base_def: 49,
+    base_spdef: 65,
+    base_spatk: 65,
+    base_speed: 45,
+    inTeam: true
+  }
+]
 
 
-var data = [
+var allPokemonData = [
     {
         dex_num: 1,
         name: "Bulbasaur",
@@ -210,7 +240,23 @@ var data = [
 
 
 
-this.pokemon = data;
+this.all_pokemon = allPokemonData;
+this.caught_pokemon = caughtPokemonData;
+
+this.isPokemonChosen = false;
+this.chosenPartyPoke = null;
+
+//shows pokemon party info box based on if a pokemon in the party was clicked
+this.showInfoBox = function(clickedPoke){
+  this.isPokemonChosen = !this.isPokemonChosen;
+  this.chosenPartyPoke = clickedPoke;
+}
+
+this.generateInfoBox = function(){
+  console.log("generate");
+  return '<p>' + this.chosenPartyPoke + '</p>';
+  console.log(this.chosenPartyPoke);
+}
 
 //printTypes takes the types for a given pokemon and prints out
 //the stylized type boxes into the Pokedex table
@@ -279,7 +325,7 @@ var totalEvolut = "";
     this.nextDexNum = givenDexNums[i];
     // console.log(this.nextDexNum);
 
-    totalEvolut += "<p>" + this.pokemon[this.nextDexNum-1].name + "</p>";
+    totalEvolut += "<p>" + this.all_pokemon[this.nextDexNum-1].name + "</p>";
 
 
   }

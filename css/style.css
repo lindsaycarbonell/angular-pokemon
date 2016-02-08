@@ -29,6 +29,10 @@ div.type {
     text-decoration: none;
 }
 
+div:hover {
+  cursor:auto;
+}
+
 a.subtle {
     color: black;
     text-decoration: none;

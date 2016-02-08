@@ -1,16 +1,23 @@
+[
 {
     dex_num: 1,
     name: "Bulbasaur",
     n_name: "Bulby",
-    currentLevel: 14,
+    current_lvl: 14,
     types: [
-      "Grass"
+      "grass"
     ],
     location: "unknown",
     evolut_chain: [
         1,
         2,
         3
+    ],
+    move_set: [
+      "Tackle",
+      "Growl",
+      "Leech Seed",
+      "Vine Whip"
     ],
     base_hp: 45,
     base_atk: 49,
@@ -19,4 +26,5 @@
     base_spatk: 65,
     base_speed: 45,
     inTeam: true
-  },
+  }
+]
