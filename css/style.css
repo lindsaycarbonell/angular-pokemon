@@ -4,6 +4,9 @@
 body{
   font-family:'Ubuntu';
 }
+body:hover, table:hover, div:hover{
+  cursor:default;
+}
 
 
 /*CSS for type boxes from PokemonShowdown.com*/
@@ -27,10 +30,6 @@ body{
 div.type {
     color: #FFFFFF;
     text-decoration: none;
-}
-
-div:hover {
-  cursor:auto;
 }
 
 a.subtle {
@@ -177,55 +176,3 @@ a.subtle:hover {
     border-color: #A99890;
     color: #F5F4F5;
 }
-
-/*.normal{
-  border-color:#A8A878;
-}
-.fire{
-  border-color:#F08030;
-}
-.water{
-  border-color:#6890F0;
-}
-.electric{
-  border-color:#F8D030;
-}
-.grass{
-  border-color:#78C850;
-}
-.ice{
-  border-color:#98D8D8;
-}
-.fighting{
-  border-color:#C03028;
-}
-.poison{
-  border-color:#A040A0;
-}
-.ground{
-  border-color:#E0C068;
-}
-.flying{
-  border-color:#A890F0;
-}
-.psychic{
-  border-color:#F85888;
-}
-.bug{
-  border-color:#A8B820;
-}
-.rock{
-  border-color:#B8A038;
-}
-.ghost{
-  border-color:#705898;
-}
-.dragon{
-  border-color:#7038F8;
-}
-.dark{
-  border-color:#705848;
-}
-.steel{
-  border-color:#B8B8D0;
-}*/
