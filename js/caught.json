@@ -7,24 +7,220 @@
     types: [
       "grass"
     ],
-    location: "unknown",
-    evolut_chain: [
-        1,
-        2,
-        3
-    ],
     move_set: [
       "Tackle",
       "Growl",
       "Leech Seed",
       "Vine Whip"
     ],
-    base_hp: 45,
-    base_atk: 49,
-    base_def: 49,
-    base_spdef: 65,
-    base_spatk: 65,
-    base_speed: 45,
+    inTeam: false
+  },
+
+{
+    dex_num: 8,
+    name: "Wartortle",
+    n_name: "",
+    current_lvl: 35,
+    types: [
+      "water"
+    ],
+    move_set: [
+      "Bite",
+      "Water Gun",
+      "Protect",
+      "Withdraw"
+    ],
     inTeam: true
+  },
+
+{
+    dex_num: 148,
+    name: "Dragonair",
+    n_name: "",
+    current_lvl: 34,
+    types: [
+      "dragon"
+    ],
+    move_set: [
+      "Slam",
+      "Thunder Wave",
+      "Twister",
+      "Dragon Rage"
+    ],
+    inTeam: true
+  },
+
+{
+    dex_num: 57,
+    name: "Primeape",
+    n_name: "",
+    current_lvl: 35,
+    types: [
+      "fight"
+    ],
+    move_set: [
+      "Rage",
+      "Seismic Toss",
+      "Karate Chop",
+      "Fury Swipes"
+    ],
+    inTeam: true
+  },
+
+{
+    dex_num: 64,
+    name: "Kadabra",
+    n_name: "",
+    current_lvl: 34,
+    types: [
+      "psychic"
+    ],
+    move_set: [
+      "Recover",
+      "Disable",
+      "Psybeam",
+      "Future Sight"
+    ],
+    inTeam: true
+  },
+
+{
+    dex_num: 20,
+    name: "Raticate",
+    n_name: "Fluffy",
+    current_lvl: 35,
+    types: [
+      "normal"
+    ],
+    move_set: [
+      "Pursuit",
+      "Cut",
+      "Quick Attack",
+      "Hyper Fang"
+    ],
+    inTeam: true
+  },
+
+{
+    dex_num: 79,
+    name: "Slowpoke",
+    n_name: "",
+    current_lvl: 31,
+    types: [
+      "water",
+      "psychic"
+    ],
+    move_set: [
+      "Surf",
+      "Headbutt",
+      "Confusion",
+      "Disable"
+    ],
+    inTeam: true
+  },
+
+{
+  dex_num: 12,
+  name: "Butterfree",
+  n_name: "Margarine",
+  current_lvl: 35,
+  types: [
+    "bug",
+    "flying"
+  ],
+  move_set: [
+    "Aerial Ace",
+    "Sleep Powder",
+    "Psybeam",
+    "Poisonpowder"
+  ],
+  inTeam: false
+},
+
+{
+    dex_num: 17,
+    name: "Pidgeotto",
+    n_name: "Flip",
+    current_lvl: 35,
+    types: [
+      "normal",
+      "flying"
+    ],
+    move_set: [
+      "Featherdance",
+      "Fly",
+      "Wing Attack",
+      "Quick Attack"
+    ],
+    inTeam: false
+  },
+
+{
+    dex_num: 97,
+    name: "Hypno",
+    n_name: "D'Eater",
+    current_lvl: 35,
+    types: [
+      "psychic"
+    ],
+    move_set: [
+      "Headbutt",
+      "Meditate",
+      "Disable",
+      "Psychic"
+    ],
+    inTeam: false
+  },
+
+{
+    dex_num: 51,
+    name: "Dugtrio",
+    n_name: "",
+    current_lvl: 35,
+    types: [
+      "ground"
+    ],
+    move_set: [
+      "Dig",
+      "Fury Swipes",
+      "Mud-Slap",
+      "Sand Tomb"
+    ],
+    inTeam: false
+  },
+
+{
+    dex_num: 135,
+    name: "Jolteon",
+    n_name: "",
+    current_lvl: 35,
+    types: [
+      "electric"
+    ],
+    move_set: [
+      "Double Kick",
+      "Sand-Attack",
+      "Shock Wave",
+      "Quick Attack"
+    ],
+    inTeam: false
+  },
+
+{
+    dex_num: 37,
+    name: "Vulpix",
+    n_name: "Pixa",
+    current_lvl: 35,
+    types: [
+      "fire"
+    ],
+    move_set: [
+      "Flamethrower",
+      "Quick Attack",
+      "Will-O-Wisp",
+      "Confuse Ray"
+    ],
+    inTeam: false
   }
+
 ]

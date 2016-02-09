@@ -2,26 +2,22 @@
 <!--dex numbers based on national pokedex. gifs from gen V, pngs from
 gen VI. movesets from gen I/II. Evolutionary chains from Gen I/II. Displaying
 nat'l pokedex from 1 to 151. Due to the lack of the SpDef stat in Gen I,
-stats are based on Gen II. -->
+stats are based on Gen II.
+***Need to add exception for Eevee, #135*** -->
 <html>
 <head>
+
 <title>Pokemon Red/Blue (Gen I) Pokedex</title>
-<!--favicon-->
 <link rel="shortcut icon" type="image/ico" href="assets/pokedex.ico" />
-<!--jquery-->
 <script src="js/jquery-2.2.0.min.js"></script>
 <!--angular js-->
 <script src="js/angular.js"></script>
 <script src="js/app.js"></script>
 <script src="js/angular-sanitize.min.js"></script>
-
-<!--bootstrap-->
+<!--stylesheets-->
 <link href="css/bootstrap.css" rel="stylesheet">
-<!--font awesome-->
 <link rel="stylesheet" href="css/font-awesome.min.css">
-<!--my stylesheet-->
 <link rel="stylesheet" href="css/style.css" />
-
 
 </head>
 
@@ -31,16 +27,16 @@ stats are based on Gen II. -->
 
 <div ng-controller="MainController as main" class="container">
 
-  <div class="container" style="margin-top:40px;padding:20px;">
+  <div class="container party-cont">
     <div class="row">
-      <div ng-class="{'col-lg-8 col-md-8 col-xs-8':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}" style="background-color:#999;transition: all 0.5s;">
-      <div ng-repeat="pokemon in main.caught_pokemon">
-        <div class="vert-centered">
+      <div class="party-box" ng-class="{'col-lg-7 col-md-7 col-xs-7':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}">
+      <div class=" col-lg-1 col-md-1" style="max-width:80px;"ng-repeat="pokemon in main.caught_pokemon">
+
           <img ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num)" />
-        </div>
+
       </div>
     </div>
-    <div ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-4 col-md-4 col-xs-4':main.isPokemonChosen }" ng-bind-html="main.generateInfoBox()">
+    <div ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }" ng-bind-html="main.generateInfoBox()">
     </div>
     </div><!--/.row-->
   </div>

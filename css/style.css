@@ -8,6 +8,23 @@ body:hover, table:hover, div:hover{
   cursor:default;
 }
 
+.vert-centered {
+  display: table-cell;
+  /*vertical-align: middle;*/
+  overflow: scroll;
+
+}
+
+.party-box{
+  background-color:#999;
+  transition: all 0.5s;
+}
+
+.party-cont{
+  max-width:800px;
+  margin-top:40px;
+  padding:20px;
+}
 
 /*CSS for type boxes from PokemonShowdown.com*/
 .type {
