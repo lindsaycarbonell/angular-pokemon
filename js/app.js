@@ -42,6 +42,7 @@ this.clickedPokemon = [];
 
 //shows pokemon party info box based on if a pokemon in the party was clicked
 this.showInfoBox = function(clickedPoke){
+
   console.log("CLICK:");
 
   //push the clicked pokemon into an array
@@ -49,7 +50,8 @@ this.showInfoBox = function(clickedPoke){
 
   //get the previously clicked pokemon
   this.previousPokemon = this.clickedPokemon[this.clickedPokemon.length-2];
-  //console.log("before: " + this.clickedPokeCount);
+  this.isPreviousExists = this.clickedPokemon.length >= 2;
+
   console.log("you clicked on: " + clickedPoke);
   console.log("previously you clicked on: " + this.previousPokemon);
   console.log("isPokemonChosen: " + this.isPokemonChosen);
@@ -57,19 +59,14 @@ this.showInfoBox = function(clickedPoke){
   // this.clickedPokeCount++;
   this.chosenPartyPoke = clickedPoke;
 
-  // if(this.clickedPokeCount%2 == 0){
-
-  //if the previous pokemon is NOT the same as the next clicked pokemon
-  //then switch isPokemonChosen to open the next box
-  if(this.clickedPokemon.length >= 2 && this.isPokemonChosen == true
-    && this.previousPokemon != clickedPoke){
-      console.log("CRITERIA MET");
+  //if statement to overcome problem of box closing and not showing new pokemon data
+  if(this.isPreviousExists && this.isPokemonChosen && this.previousPokemon != clickedPoke){
       this.isPokemonChosen = !this.isPokemonChosen;
   }
 
   this.isPokemonChosen = !this.isPokemonChosen;
+  
   console.log("automatically switch to: " + this.isPokemonChosen);
-
   console.log("isPokemonChosen: " + this.isPokemonChosen);
 }
 
