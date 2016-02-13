@@ -1,764 +1,563 @@
-[
-    {
-        dex_num: 1,
-        name: "Bulbasaur",
-        types: [
-          "grass"
-        ],
-        location: "unknown",
-        evolut_chain: [
-            1,
-            2,
-            3
-        ],
-        base_hp: 45,
-        base_atk: 49,
-        base_def: 49,
-        base_spdef: 65,
-        base_spatk: 65,
-        base_speed: 45,
-        isCaught: true
-      },
-
-      {
-        dex_num: 2,
-        name: "Ivysaur",
-        types: [
-          "grass",
-          "poison"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          1,
-          2,
-          3
-        ],
-        base_hp: 60,
-        base_atk: 62,
-        base_def: 63,
-        base_spatk: 80,
-        base_spdef: 80,
-        base_speed: 60,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 3,
-        name: "Venusaur",
-        types: [
-          "grass",
-          "poison"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          1,
-          2,
-          3
-        ],
-        base_hp: 80,
-        base_atk: 82,
-        base_def: 83,
-        base_spdef: 100,
-        base_spatk: 100,
-        base_speed: 80,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 4,
-        name: "Charmander",
-        types: [
-          "fire"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          4,
-          5,
-          6
-        ],
-        base_hp: 39,
-        base_atk: 52,
-        base_def: 43,
-        base_spatk: 50,
-        base_spdef: 50,
-        base_speed: 65,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 5,
-        name: "Charmeleon",
-        types: [
-          "fire"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          4,
-          5,
-          6
-        ],
-        base_hp: 58,
-        base_atk: 64,
-        base_def: 58,
-        base_spatk: 65,
-        base_spdef: 65,
-        base_speed: 80,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 6,
-        name: "Charizard",
-        types: [
-          "fire",
-          "flying"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          4,
-          5,
-          6
-        ],
-        base_hp: 78,
-        base_atk: 84,
-        base_def: 78,
-        base_spatk: 85,
-        base_spdef: 85,
-        base_speed: 100,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 7,
-        name: "Squirtle",
-        types: [
-          "water"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          7,
-          8,
-          9
-        ],
-        base_hp: 44,
-        base_atk: 48,
-        base_def: 65,
-        base_spatk: 50,
-        base_spdef: 64,
-        base_speed: 43,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 8,
-        name: "Wartortle",
-        types: [
-          "water"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          7,
-          8,
-          9
-        ],
-        base_hp: 59,
-        base_atk: 63,
-        base_def: 80,
-        base_spatk: 65,
-        base_spdef: 80,
-        base_speed: 58,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 9,
-        name: "Blastoise",
-        types: [
-          "water"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          7,
-          8,
-          9
-        ],
-        base_hp: 79,
-        base_atk: 83,
-        base_def: 100,
-        base_spatk: 85,
-        base_spdef: 105,
-        base_speed: 78,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 10,
-        name: "Caterpie",
-        types: [
-          "bug"
-        ],
-        location: "Route 25, Viridian Forest (Red)",
-        evolut_chain: [
-          10,
-          11,
-          12
-        ],
-        base_hp: 45,
-        base_atk: 30,
-        base_def: 35,
-        base_spatk: 20,
-        base_spdef: 20,
-        base_speed: 45,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 11,
-        name: "Metapod",
-        types: [
-          "bug"
-        ],
-        location: "Route 25, Viridian Forest",
-        evolut_chain: [
-          10,
-          11,
-          12
-        ],
-        base_hp: 50,
-        base_atk: 20,
-        base_def: 55,
-        base_spatk: 25,
-        base_spdef: 25,
-        base_speed: 30,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 12,
-        name: "Butterfree",
-        types: [
-          "bug",
-          "flying"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          10,
-          11,
-          12
-        ],
-        base_hp: 60,
-        base_atk: 45,
-        base_def: 50,
-        base_spatk: 80,
-        base_spdef: 80,
-        base_speed: 70,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 16,
-        name: "Pidgey",
-        types: [
-          "flying"
-        ],
-        location: "Routes 1-15, 21, 24, 25",
-        evolut_chain: [
-          16,
-          17,
-          18
-        ],
-        base_hp: 40,
-        base_atk: 45,
-        base_def: 40,
-        base_spatk: 35,
-        base_spdef: 35,
-        base_speed: 56,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 17,
-        name: "Pidgeotto",
-        types: [
-          "normal",
-          "flying"
-        ],
-        location: "Route 14, 15, 21",
-        evolut_chain: [
-          16,
-          17,
-          18
-        ],
-        base_hp: 63,
-        base_atk: 60,
-        base_def: 55,
-        base_spatk: 50,
-        base_spdef: 50,
-        base_speed: 71,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 18,
-        name: "Pidgeot",
-        types: [
-          "normal",
-          "flying"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          16,
-          17,
-          18
-        ],
-        base_hp: 83,
-        base_atk: 80,
-        base_def: 75,
-        base_spatk: 70,
-        base_spdef: 70,
-        base_speed: 91,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 19,
-        name: "Rattata",
-        types: [
-          "normal"
-        ],
-        location: "Route 1, 2, 4, 9, 16, 21, 22",
-        evolut_chain: [
-          19,
-          20
-        ],
-        base_hp: 30,
-        base_atk: 56,
-        base_def: 35,
-        base_spatk: 25,
-        base_spdef: 35,
-        base_speed: 72,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 20,
-        name: "Raticate",
-        types: [
-          "normal"
-        ],
-        location: "Route 16, 17, 18, 21",
-        evolut_chain: [
-          19,
-          20
-        ],
-        base_hp: 55,
-        base_atk: 81,
-        base_def: 60,
-        base_spatk: 50,
-        base_spdef: 70,
-        base_speed: 97,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 37,
-        name: "Vulpix",
-        types: [
-          "fire"
-        ],
-        location: "Pokemon Mansion",
-        evolut_chain: [
-          37,
-          38
-        ],
-        base_hp: 38,
-        base_atk: 41,
-        base_def: 40,
-        base_spatk: 50,
-        base_spdef: 65,
-        base_speed: 65,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 38,
-        name: "Ninetales",
-        types: [
-          "fire"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          38,
-          39
-        ],
-        base_hp: 73,
-        base_atk: 76,
-        base_def: 75,
-        base_spatk: 81,
-        base_spdef: 100,
-        base_speed: 100,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 49,
-        name: "Diglett",
-        types: [
-          "ground"
-        ],
-        location: "Diglett's Cave",
-        evolut_chain: [
-          50,
-          51
-        ],
-        base_hp: 10,
-        base_atk: 55,
-        base_def: 25,
-        base_spatk: 35,
-        base_spdef: 45,
-        base_speed: 95,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 51,
-        name: "Dugtrio",
-        types: [
-          "ground"
-        ],
-        location: "Diglett's Cave",
-        evolut_chain: [
-          50,
-          51
-        ],
-        base_hp: 35,
-        base_atk: 80,
-        base_def: 50,
-        base_spatk: 50,
-        base_spdef: 70,
-        base_speed: 120,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 56,
-        name: "Mankey",
-        types: [
-          "fighting"
-        ],
-        location: "Route 5, 6, 7, 8 (Red)",
-        evolut_chain: [
-          56,
-          57
-        ],
-        base_hp: 40,
-        base_atk: 80,
-        base_def: 35,
-        base_spatk: 35,
-        base_spdef: 45,
-        base_speed: 70,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 57,
-        name: "Primeape",
-        types: [
-          "fighting"
-        ],
-        location: "Route 23 (Yellow)",
-        evolut_chain: [
-          56,
-          57
-        ],
-        base_hp: 65,
-        base_atk: 105,
-        base_def: 60,
-        base_spatk: 60,
-        base_spdef: 70,
-        base_speed: 95,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 63,
-        name: "Abra",
-        types: [
-          "psychic"
-        ],
-        location: "Route 24, 25",
-        evolut_chain: [
-          63,
-          64,
-          65
-        ],
-        base_hp: 25,
-        base_atk: 20,
-        base_def: 25,
-        base_spatk: 105,
-        base_spdef: 55,
-        base_speed: 90,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 64,
-        name: "Kadabra",
-        types: [
-          "psychic"
-        ],
-        location: "Cerulean Cave",
-        evolut_chain: [
-          63,
-          64,
-          65
-        ],
-        base_hp: 40,
-        base_atk: 35,
-        base_def: 30,
-        base_spatk: 120,
-        base_spdef: 70,
-        base_speed: 105,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 65,
-        name: "Alakazam",
-        types: [
-          "psychic"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          63,
-          64,
-          65
-        ],
-        base_hp: 55,
-        base_atk: 50,
-        base_def: 45,
-        base_spatk: 135,
-        base_spdef: 85,
-        base_speed: 120,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 79,
-        name: "Slowpoke",
-        types: [
-          "water",
-          "psychic"
-        ],
-        location: "Route 10, Celadon City, Safari Zone, Seafoam Islands",
-        evolut_chain: [
-          79,
-          80
-        ],
-        base_hp: 90,
-        base_atk: 65,
-        base_def: 65,
-        base_spatk: 40,
-        base_spdef: 40,
-        base_speed: 15,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 80,
-        name: "Slowbro",
-        types: [
-          "water",
-          "psychic"
-        ],
-        location: "Route 23, Cerulean Cave, Seafoam Islands",
-        evolut_chain: [
-          80,
-          81
-        ],
-        base_hp: 95,
-        base_atk: 75,
-        base_def: 110,
-        base_spatk: 100,
-        base_spdef: 80,
-        base_speed: 30,
-        isCaught: false
-
-      },
-
-      {
-        dex_num: 96,
-        name: "Drowzee",
-        types: [
-          "psychic"
-        ],
-        location: "Route 11",
-        evolut_chain: [
-          96,
-          97
-        ],
-        base_hp: 60,
-        base_atk: 48,
-        base_def: 45,
-        base_spatk: 43,
-        base_spdef: 90,
-        base_speed: 42,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 97,
-        name: "Hypno",
-        types: [
-          "psychic"
-        ],
-        location: "Cerulean Cave",
-        evolut_chain: [
-          96,
-          96
-        ],
-        base_hp: 85,
-        base_atk: 73,
-        base_def: 70,
-        base_spatk: 73,
-        base_spdef: 115,
-        base_speed: 67,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 133,
-        name: "Eevee",
-        types: [
-          "normal"
-        ],
-        location: "Gift in Cerulean City",
-        evolut_chain: [
-          133,
-          135
-        ],
-        base_hp: 55,
-        base_atk: 55,
-        base_def: 50,
-        base_spatk: 45,
-        base_spdef: 65,
-        base_speed: 55,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 135,
-        name: "Jolteon",
-        types: [
-          "electric"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          133,
-          135
-        ],
-        base_hp: 65,
-        base_atk: 65,
-        base_def: 60,
-        base_spatk: 110,
-        base_spdef: 95,
-        base_speed: 130,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 147,
-        name: "Dratini",
-        types: [
-          "dragon"
-        ],
-        location: "Safari Zone",
-        evolut_chain: [
-          147,
-          148,
-          149
-        ],
-        base_hp: 41,
-        base_atk: 64,
-        base_def: 45,
-        base_spatk: 50,
-        base_spdef: 50,
-        base_speed: 50,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 148,
-        name: "Dragonair",
-        types: [
-          "dragon"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          147,
-          148,
-          149
-        ],
-        base_hp: 61,
-        base_atk: 84,
-        base_def: 65,
-        base_spatk: 70,
-        base_spdef: 70,
-        base_speed: 70,
-        isCaught: true
-
-      },
-
-      {
-        dex_num: 149,
-        name: "Dragonite",
-        types: [
-          "dragon"
-        ],
-        location: "unknown",
-        evolut_chain: [
-          147,
-          148,
-          149
-        ],
-        base_hp: 91,
-        base_atk: 134,
-        base_def: 95,
-        base_spatk: 100,
-        base_spdef: 100,
-        base_speed: 80,
-        isCaught: false
-
-      }
+[ { "base_atk" : 49,
+    "base_def" : 49,
+    "base_hp" : 45,
+    "base_spatk" : 65,
+    "base_spdef" : 65,
+    "base_speed" : 45,
+    "dex_num" : 1,
+    "evolut_chain" : [ 1,
+        2,
+        3
+      ],
+    "isCaught" : true,
+    "location" : "unknown",
+    "name" : "Bulbasaur",
+    "types" : [ "grass" ]
+  },
+  { "base_atk" : 62,
+    "base_def" : 63,
+    "base_hp" : 60,
+    "base_spatk" : 80,
+    "base_spdef" : 80,
+    "base_speed" : 60,
+    "dex_num" : 2,
+    "evolut_chain" : [ 1,
+        2,
+        3
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Ivysaur",
+    "types" : [ "grass",
+        "poison"
+      ]
+  },
+  { "base_atk" : 82,
+    "base_def" : 83,
+    "base_hp" : 80,
+    "base_spatk" : 100,
+    "base_spdef" : 100,
+    "base_speed" : 80,
+    "dex_num" : 3,
+    "evolut_chain" : [ 1,
+        2,
+        3
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Venusaur",
+    "types" : [ "grass",
+        "poison"
+      ]
+  },
+  { "base_atk" : 52,
+    "base_def" : 43,
+    "base_hp" : 39,
+    "base_spatk" : 50,
+    "base_spdef" : 50,
+    "base_speed" : 65,
+    "dex_num" : 4,
+    "evolut_chain" : [ 4,
+        5,
+        6
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Charmander",
+    "types" : [ "fire" ]
+  },
+  { "base_atk" : 64,
+    "base_def" : 58,
+    "base_hp" : 58,
+    "base_spatk" : 65,
+    "base_spdef" : 65,
+    "base_speed" : 80,
+    "dex_num" : 5,
+    "evolut_chain" : [ 4,
+        5,
+        6
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Charmeleon",
+    "types" : [ "fire" ]
+  },
+  { "base_atk" : 84,
+    "base_def" : 78,
+    "base_hp" : 78,
+    "base_spatk" : 85,
+    "base_spdef" : 85,
+    "base_speed" : 100,
+    "dex_num" : 6,
+    "evolut_chain" : [ 4,
+        5,
+        6
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Charizard",
+    "types" : [ "fire",
+        "flying"
+      ]
+  },
+  { "base_atk" : 48,
+    "base_def" : 65,
+    "base_hp" : 44,
+    "base_spatk" : 50,
+    "base_spdef" : 64,
+    "base_speed" : 43,
+    "dex_num" : 7,
+    "evolut_chain" : [ 7,
+        8,
+        9
+      ],
+    "isCaught" : true,
+    "location" : "unknown",
+    "name" : "Squirtle",
+    "types" : [ "water" ]
+  },
+  { "base_atk" : 63,
+    "base_def" : 80,
+    "base_hp" : 59,
+    "base_spatk" : 65,
+    "base_spdef" : 80,
+    "base_speed" : 58,
+    "dex_num" : 8,
+    "evolut_chain" : [ 7,
+        8,
+        9
+      ],
+    "isCaught" : true,
+    "location" : "unknown",
+    "name" : "Wartortle",
+    "types" : [ "water" ]
+  },
+  { "base_atk" : 83,
+    "base_def" : 100,
+    "base_hp" : 79,
+    "base_spatk" : 85,
+    "base_spdef" : 105,
+    "base_speed" : 78,
+    "dex_num" : 9,
+    "evolut_chain" : [ 7,
+        8,
+        9
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Blastoise",
+    "types" : [ "water" ]
+  },
+  { "base_atk" : 30,
+    "base_def" : 35,
+    "base_hp" : 45,
+    "base_spatk" : 20,
+    "base_spdef" : 20,
+    "base_speed" : 45,
+    "dex_num" : 10,
+    "evolut_chain" : [ 10,
+        11,
+        12
+      ],
+    "isCaught" : true,
+    "location" : "Route 25, Viridian Forest (Red)",
+    "name" : "Caterpie",
+    "types" : [ "bug" ]
+  },
+  { "base_atk" : 20,
+    "base_def" : 55,
+    "base_hp" : 50,
+    "base_spatk" : 25,
+    "base_spdef" : 25,
+    "base_speed" : 30,
+    "dex_num" : 11,
+    "evolut_chain" : [ 10,
+        11,
+        12
+      ],
+    "isCaught" : true,
+    "location" : "Route 25, Viridian Forest",
+    "name" : "Metapod",
+    "types" : [ "bug" ]
+  },
+  { "base_atk" : 45,
+    "base_def" : 50,
+    "base_hp" : 60,
+    "base_spatk" : 80,
+    "base_spdef" : 80,
+    "base_speed" : 70,
+    "dex_num" : 12,
+    "evolut_chain" : [ 10,
+        11,
+        12
+      ],
+    "isCaught" : true,
+    "location" : "unknown",
+    "name" : "Butterfree",
+    "types" : [ "bug",
+        "flying"
+      ]
+  },
+  { "base_atk" : 45,
+    "base_def" : 40,
+    "base_hp" : 40,
+    "base_spatk" : 35,
+    "base_spdef" : 35,
+    "base_speed" : 56,
+    "dex_num" : 16,
+    "evolut_chain" : [ 16,
+        17,
+        18
+      ],
+    "isCaught" : true,
+    "location" : "Routes 1-15, 21, 24, 25",
+    "name" : "Pidgey",
+    "types" : [ "flying" ]
+  },
+  { "base_atk" : 60,
+    "base_def" : 55,
+    "base_hp" : 63,
+    "base_spatk" : 50,
+    "base_spdef" : 50,
+    "base_speed" : 71,
+    "dex_num" : 17,
+    "evolut_chain" : [ 16,
+        17,
+        18
+      ],
+    "isCaught" : true,
+    "location" : "Route 14, 15, 21",
+    "name" : "Pidgeotto",
+    "types" : [ "normal",
+        "flying"
+      ]
+  },
+  { "base_atk" : 80,
+    "base_def" : 75,
+    "base_hp" : 83,
+    "base_spatk" : 70,
+    "base_spdef" : 70,
+    "base_speed" : 91,
+    "dex_num" : 18,
+    "evolut_chain" : [ 16,
+        17,
+        18
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Pidgeot",
+    "types" : [ "normal",
+        "flying"
+      ]
+  },
+  { "base_atk" : 56,
+    "base_def" : 35,
+    "base_hp" : 30,
+    "base_spatk" : 25,
+    "base_spdef" : 35,
+    "base_speed" : 72,
+    "dex_num" : 19,
+    "evolut_chain" : [ 19,
+        20
+      ],
+    "isCaught" : true,
+    "location" : "Route 1, 2, 4, 9, 16, 21, 22",
+    "name" : "Rattata",
+    "types" : [ "normal" ]
+  },
+  { "base_atk" : 81,
+    "base_def" : 60,
+    "base_hp" : 55,
+    "base_spatk" : 50,
+    "base_spdef" : 70,
+    "base_speed" : 97,
+    "dex_num" : 20,
+    "evolut_chain" : [ 19,
+        20
+      ],
+    "isCaught" : true,
+    "location" : "Route 16, 17, 18, 21",
+    "name" : "Raticate",
+    "types" : [ "normal" ]
+  },
+  { "base_atk" : 41,
+    "base_def" : 40,
+    "base_hp" : 38,
+    "base_spatk" : 50,
+    "base_spdef" : 65,
+    "base_speed" : 65,
+    "dex_num" : 37,
+    "evolut_chain" : [ 37,
+        38
+      ],
+    "isCaught" : true,
+    "location" : "Pokemon Mansion",
+    "name" : "Vulpix",
+    "types" : [ "fire" ]
+  },
+  { "base_atk" : 76,
+    "base_def" : 75,
+    "base_hp" : 73,
+    "base_spatk" : 81,
+    "base_spdef" : 100,
+    "base_speed" : 100,
+    "dex_num" : 38,
+    "evolut_chain" : [ 37,
+        38
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Ninetales",
+    "types" : [ "fire" ]
+  },
+  { "base_atk" : 55,
+    "base_def" : 25,
+    "base_hp" : 10,
+    "base_spatk" : 35,
+    "base_spdef" : 45,
+    "base_speed" : 95,
+    "dex_num" : 50,
+    "evolut_chain" : [ 50,
+        51
+      ],
+    "isCaught" : true,
+    "location" : "Diglett's Cave",
+    "name" : "Diglett",
+    "types" : [ "ground" ]
+  },
+  { "base_atk" : 80,
+    "base_def" : 50,
+    "base_hp" : 35,
+    "base_spatk" : 50,
+    "base_spdef" : 70,
+    "base_speed" : 120,
+    "dex_num" : 51,
+    "evolut_chain" : [ 50,
+        51
+      ],
+    "isCaught" : true,
+    "location" : "Diglett's Cave",
+    "name" : "Dugtrio",
+    "types" : [ "ground" ]
+  },
+  { "base_atk" : 80,
+    "base_def" : 35,
+    "base_hp" : 40,
+    "base_spatk" : 35,
+    "base_spdef" : 45,
+    "base_speed" : 70,
+    "dex_num" : 56,
+    "evolut_chain" : [ 56,
+        57
+      ],
+    "isCaught" : true,
+    "location" : "Route 5, 6, 7, 8 (Red)",
+    "name" : "Mankey",
+    "types" : [ "fighting" ]
+  },
+  { "base_atk" : 105,
+    "base_def" : 60,
+    "base_hp" : 65,
+    "base_spatk" : 60,
+    "base_spdef" : 70,
+    "base_speed" : 95,
+    "dex_num" : 57,
+    "evolut_chain" : [ 56,
+        57
+      ],
+    "isCaught" : true,
+    "location" : "Route 23 (Yellow)",
+    "name" : "Primeape",
+    "types" : [ "fighting" ]
+  },
+  { "base_atk" : 20,
+    "base_def" : 25,
+    "base_hp" : 25,
+    "base_spatk" : 105,
+    "base_spdef" : 55,
+    "base_speed" : 90,
+    "dex_num" : 63,
+    "evolut_chain" : [ 63,
+        64,
+        65
+      ],
+    "isCaught" : true,
+    "location" : "Route 24, 25",
+    "name" : "Abra",
+    "types" : [ "psychic" ]
+  },
+  { "base_atk" : 35,
+    "base_def" : 30,
+    "base_hp" : 40,
+    "base_spatk" : 120,
+    "base_spdef" : 70,
+    "base_speed" : 105,
+    "dex_num" : 64,
+    "evolut_chain" : [ 63,
+        64,
+        65
+      ],
+    "isCaught" : true,
+    "location" : "Cerulean Cave",
+    "name" : "Kadabra",
+    "types" : [ "psychic" ]
+  },
+  { "base_atk" : 50,
+    "base_def" : 45,
+    "base_hp" : 55,
+    "base_spatk" : 135,
+    "base_spdef" : 85,
+    "base_speed" : 120,
+    "dex_num" : 65,
+    "evolut_chain" : [ 63,
+        64,
+        65
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Alakazam",
+    "types" : [ "psychic" ]
+  },
+  { "base_atk" : 65,
+    "base_def" : 65,
+    "base_hp" : 90,
+    "base_spatk" : 40,
+    "base_spdef" : 40,
+    "base_speed" : 15,
+    "dex_num" : 79,
+    "evolut_chain" : [ 79,
+        80
+      ],
+    "isCaught" : true,
+    "location" : "Route 10, Celadon City, Safari Zone, Seafoam Islands",
+    "name" : "Slowpoke",
+    "types" : [ "water",
+        "psychic"
+      ]
+  },
+  { "base_atk" : 75,
+    "base_def" : 110,
+    "base_hp" : 95,
+    "base_spatk" : 100,
+    "base_spdef" : 80,
+    "base_speed" : 30,
+    "dex_num" : 80,
+    "evolut_chain" : [ 80,
+        81
+      ],
+    "isCaught" : false,
+    "location" : "Route 23, Cerulean Cave, Seafoam Islands",
+    "name" : "Slowbro",
+    "types" : [ "water",
+        "psychic"
+      ]
+  },
+  { "base_atk" : 48,
+    "base_def" : 45,
+    "base_hp" : 60,
+    "base_spatk" : 43,
+    "base_spdef" : 90,
+    "base_speed" : 42,
+    "dex_num" : 96,
+    "evolut_chain" : [ 96,
+        97
+      ],
+    "isCaught" : true,
+    "location" : "Route 11",
+    "name" : "Drowzee",
+    "types" : [ "psychic" ]
+  },
+  { "base_atk" : 73,
+    "base_def" : 70,
+    "base_hp" : 85,
+    "base_spatk" : 73,
+    "base_spdef" : 115,
+    "base_speed" : 67,
+    "dex_num" : 97,
+    "evolut_chain" : [ 96,
+        97
+      ],
+    "isCaught" : true,
+    "location" : "Cerulean Cave",
+    "name" : "Hypno",
+    "types" : [ "psychic" ]
+  },
+  { "base_atk" : 55,
+    "base_def" : 50,
+    "base_hp" : 55,
+    "base_spatk" : 45,
+    "base_spdef" : 65,
+    "base_speed" : 55,
+    "dex_num" : 133,
+    "evolut_chain" : [ 133,
+        135
+      ],
+    "isCaught" : true,
+    "location" : "Gift in Cerulean City",
+    "name" : "Eevee",
+    "types" : [ "normal" ]
+  },
+  { "base_atk" : 65,
+    "base_def" : 60,
+    "base_hp" : 65,
+    "base_spatk" : 110,
+    "base_spdef" : 95,
+    "base_speed" : 130,
+    "dex_num" : 135,
+    "evolut_chain" : [ 133,
+        135
+      ],
+    "isCaught" : true,
+    "location" : "unknown",
+    "name" : "Jolteon",
+    "types" : [ "electric" ]
+  },
+  { "base_atk" : 64,
+    "base_def" : 45,
+    "base_hp" : 41,
+    "base_spatk" : 50,
+    "base_spdef" : 50,
+    "base_speed" : 50,
+    "dex_num" : 147,
+    "evolut_chain" : [ 147,
+        148,
+        149
+      ],
+    "isCaught" : true,
+    "location" : "Safari Zone",
+    "name" : "Dratini",
+    "types" : [ "dragon" ]
+  },
+  { "base_atk" : 84,
+    "base_def" : 65,
+    "base_hp" : 61,
+    "base_spatk" : 70,
+    "base_spdef" : 70,
+    "base_speed" : 70,
+    "dex_num" : 148,
+    "evolut_chain" : [ 147,
+        148,
+        149
+      ],
+    "isCaught" : true,
+    "location" : "unknown",
+    "name" : "Dragonair",
+    "types" : [ "dragon" ]
+  },
+  { "base_atk" : 134,
+    "base_def" : 95,
+    "base_hp" : 91,
+    "base_spatk" : 100,
+    "base_spdef" : 100,
+    "base_speed" : 80,
+    "dex_num" : 149,
+    "evolut_chain" : [ 147,
+        148,
+        149
+      ],
+    "isCaught" : false,
+    "location" : "unknown",
+    "name" : "Dragonite",
+    "types" : [ "dragon" ]
+  }
 ]
