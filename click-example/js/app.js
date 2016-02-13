@@ -46,6 +46,7 @@ this.showInfoBox = function(clickedPoke){
       this.isBoxOpen = !this.isBoxOpen;
   }
 
+  //normal behavior if above criteria isn't met
   this.isBoxOpen = !this.isBoxOpen;
 
   console.log("automatically switch to: " + this.isBoxOpen);
