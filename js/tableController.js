@@ -1,6 +1,6 @@
-var app = angular.module('mainApp',['ngSanitize']);
+var app = angular.module('Pokedex',['ngSanitize']);
 
-app.controller('MainController',[('$http'),function($http) {
+app.controller('TableController',[('$http'),function($http) {
 
 var _this = this;
 this.all_pokemon = [];
@@ -36,41 +36,11 @@ $http.get('js/caught.json')
 
 this.isPokemonChosen = false;
 this.chosenPartyPoke = null;
-this.clickedPokeCount = 0;
-
-this.clickedPokemon = [];
 
 //shows pokemon party info box based on if a pokemon in the party was clicked
 this.showInfoBox = function(clickedPoke){
-  console.log("CLICK:");
-
-  //push the clicked pokemon into an array
-  this.clickedPokemon.push(clickedPoke);
-
-  //get the previously clicked pokemon
-  this.previousPokemon = this.clickedPokemon[this.clickedPokemon.length-2];
-  //console.log("before: " + this.clickedPokeCount);
-  console.log("you clicked on: " + clickedPoke);
-  console.log("previously you clicked on: " + this.previousPokemon);
-  console.log("isPokemonChosen: " + this.isPokemonChosen);
-
-  // this.clickedPokeCount++;
-  this.chosenPartyPoke = clickedPoke;
-
-  // if(this.clickedPokeCount%2 == 0){
-
-  //if the previous pokemon is NOT the same as the next clicked pokemon
-  //then switch isPokemonChosen to open the next box
-  if(this.clickedPokemon.length >= 2 && this.isPokemonChosen == true
-    && this.previousPokemon != clickedPoke){
-      console.log("CRITERIA MET");
-      this.isPokemonChosen = !this.isPokemonChosen;
-  }
-
   this.isPokemonChosen = !this.isPokemonChosen;
-  console.log("automatically switch to: " + this.isPokemonChosen);
-
-  console.log("isPokemonChosen: " + this.isPokemonChosen);
+  this.chosenPartyPoke = clickedPoke;
 }
 
 this.generateInfoBox = function(){
@@ -138,14 +108,14 @@ this.printEvolut = function(givenDexNums, givenName){
 
 var totalEvolut = "";
 
-//console.log("start printevolut with " + givenDexNums.length);
+console.log("start printevolut with " + givenDexNums.length);
   //loop through given array of types
   for(var i=0; i<givenDexNums.length; i++){
 
     this.nextDexNum = givenDexNums[i];
-    //console.log("Given Name: " + givenName);
-    //console.log("All: " + givenDexNums);
-    //console.log("Next: " + this.nextDexNum);
+    console.log("Given Name: " + givenName);
+    console.log("All: " + givenDexNums);
+    console.log("Next: " + this.nextDexNum);
 
     totalEvolut += "<p>" + this.all_pokemon[this.nextDexNum-1].name + "</p>";
 
