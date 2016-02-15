@@ -29,8 +29,9 @@ stats are based on Gen II.
 
   <div class="container party-cont">
     <div class="row">
-      <div class="party-box" ng-class="{'col-lg-7 col-md-7 col-xs-7':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}">
-      <div class=" col-lg-1 col-md-1" style="max-width:80px;"ng-repeat="pokemon in main.caught_pokemon">
+      <!-- <div class="party-box" ng-class="{'col-lg-7 col-md-7 col-xs-7':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}"> -->
+      <div class="party-box" class="col-lg-7 col-md-7 col-xs-7">
+      <div class="col-lg-1 col-md-1" style="max-width:80px;"ng-repeat="pokemon in main.caught_pokemon">
 
           <!-- <img ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num)" /> -->
           <div style="overflow:auto;width:25px;">
@@ -39,8 +40,47 @@ stats are based on Gen II.
           </div>
       </div>
     </div>
-    <div ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }" ng-bind-html="main.generateInfoBox()">
+    <!-- <div ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }" ng-bind-html="main.generateInfoBox()"> -->
+    <div class="info-box col-lg-5 col-md-5 col-xs-5">
+      <div style="display:table-row;margin-bottom:10px;">
+        <span style="display:table-cell;">No.001</span>
+        <span style="display:table-cell;" class="level-cell">/Lv 35</span>
+      </div>
+
+      <div style="display:table-row;">
+        <span class="name-cell">Bulbasaur</span>
+        <span class="type-cell type grass">Grass</span>
+      </div>
+
+      <div style="width:inherit;margin-left:20%;margin-bottom:3%;">
+        <img class="img-cell" src="assets/1.png" />
+        <div sytle="display:table-row">
+          <span class="nick-cell">Bulby</span>
+          <span class="level-cell">/Lv 35</span>
+        </div>
+      </div>
+
+      <ul class="move-box">
+        <li class="move-cell">
+          <span class="move-cell-type type bug">Bug</span>
+          <span>Fury Cutter</span>
+        </li>
+
+        <li class="move-cell">
+          <span class="move-cell-type type grass">Grass</span>
+          <span>Magical Leaf</span>
+        </li>
+        <li class="move-cell">
+          <span class="move-cell-type type grass">Grass</span>
+          <span>Absorb</span>
+        </li>
+        <li class="move-cell">
+            <span class="move-cell-type type normal">Normal</span>
+            <span>Cut</span>
+        </li>
+      </ul>
     </div>
+    <!-- </div> -->
     </div><!--/.row-->
   </div>
 
@@ -51,7 +91,7 @@ stats are based on Gen II.
       <th ng-click="main.setSort('name')">Name</th>
       <th>Types</th>
       <th ng-click="main.setSort('location')">Location</th>
-      <th>Evolutionary Chain</th>
+      <!-- <th>Evolutionary Chain</th> -->
       <th ng-click="main.setSort('base_hp')">Base HP</th>
       <th ng-click="main.setSort('base_atk')">Base Attack</th>
       <th ng-click="main.setSort('base_def')">Base Defense</th>

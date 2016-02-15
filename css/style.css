@@ -15,9 +15,75 @@ body:hover, table:hover, div:hover{
 
 }
 
+.info-box{
+  background-color:pink;
+  padding-top:20px;
+  padding-bottom:20px;
+  display:table;
+}
+
+.img-cell, .level-cell, .move-box, .type-cell{
+  display:table-row;
+}
+.img-cell{
+  margin-left:-5%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+
+.name-cell{
+  /*text-align:center;*/
+  display:table-cell;
+  vertical-align: bottom;
+  font-size:15pt;
+}
+
+.level-cell {
+  display:table-cell;
+}
+
+.move-cell{
+  background-color:white;
+  border-radius:2px;
+  margin-bottom:8px;
+  height:25px;
+  width:250px;
+  margin-left:7%;
+  text-transform: uppercase;
+  position:relative;
+}
+
+.move-cell-type{
+  position:absolute;
+  top:-5px;
+  left:-3px;
+  font-size:8pt;
+  font-weight:bold;
+  padding:2pt;
+  border-radius:1px;
+}
+
+.move-box{
+  list-style-type: none;
+  text-align:center;
+  width:inherit;
+}
+.type-cell{
+  display:table-cell;
+  vertical-align: bottom;
+}
+.nick-cell{
+  display:table-cell;
+}
+
+
+
 .party-box{
   background-color:#999;
-  transition: all 0.5s;
+  /*transition: all 0.3s;*/
 }
 
 .party-cont{

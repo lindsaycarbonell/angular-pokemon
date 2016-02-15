@@ -65,14 +65,19 @@ this.showInfoBox = function(clickedPoke){
   }
 
   this.isPokemonChosen = !this.isPokemonChosen;
-  
+
   console.log("automatically switch to: " + this.isPokemonChosen);
   console.log("isPokemonChosen: " + this.isPokemonChosen);
 }
 
 this.generateInfoBox = function(){
   //console.log("generate");
-  return '<p>' + this.chosenPartyPoke + '</p>';
+
+  return '<div class="info-box"><img src="assets/' +
+  this.chosenPartyPoke + '.png" /></div>';
+
+
+
   console.log(this.chosenPartyPoke);
 }
 
