@@ -29,8 +29,8 @@ stats are based on Gen II.
 
   <div class="container party-cont">
     <div class="row">
-      <!-- <div class="party-box" ng-class="{'col-lg-7 col-md-7 col-xs-7':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}"> -->
-      <div class="party-box" class="col-lg-7 col-md-7 col-xs-7">
+      <div class="party-box" ng-class="{'col-lg-7 col-md-7 col-xs-7':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}">
+      <!-- <div class="party-box" class="col-lg-7 col-md-7 col-xs-7"> -->
       <div class="col-lg-1 col-md-1" style="max-width:80px;"ng-repeat="pokemon in main.caught_pokemon">
 
           <!-- <img ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num)" /> -->
@@ -40,8 +40,8 @@ stats are based on Gen II.
           </div>
       </div>
     </div>
-    <!-- <div ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }" ng-bind-html="main.generateInfoBox()"> -->
-    <div class="info-box col-lg-5 col-md-5 col-xs-5">
+    <div ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }" ng-bind-html="main.generateInfoBox()">
+    <!-- <div class="info-box col-lg-5 col-md-5 col-xs-5">
       <div style="display:table-row;margin-bottom:10px;">
         <span style="display:table-cell;">No.001</span>
         <span style="display:table-cell;" class="level-cell">/Lv 35</span>
@@ -79,7 +79,7 @@ stats are based on Gen II.
             <span>Cut</span>
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- </div> -->
     </div><!--/.row-->
   </div>
@@ -91,7 +91,7 @@ stats are based on Gen II.
       <th ng-click="main.setSort('name')">Name</th>
       <th>Types</th>
       <th ng-click="main.setSort('location')">Location</th>
-      <!-- <th>Evolutionary Chain</th> -->
+      <th>Evolutionary Chain</th>
       <th ng-click="main.setSort('base_hp')">Base HP</th>
       <th ng-click="main.setSort('base_atk')">Base Attack</th>
       <th ng-click="main.setSort('base_def')">Base Defense</th>
@@ -100,14 +100,15 @@ stats are based on Gen II.
       <th ng-click="main.setSort('base_speed')">Base Speed</th>
     </thead>
 
-    <tr ng-repeat="pokemon in main.all_pokemon | orderBy:main.sort:main.direction">
+    <tr ng-repeat="pokemon in main.all_pokemon | orderBy:main.sort:main.direction"
+    ng-if="pokemon.name !== undefined" >
       <td>{{pokemon.dex_num}}</td>
       <!--sprites from pokestadium.com-->
       <td><img ng-src="assets/{{pokemon.dex_num}}.gif" /></td>
       <td>{{pokemon.name}}</td>
       <td ng-bind-html="main.printTypes(pokemon.types)"></td>
       <td>{{pokemon.location}}</td>
-      <!-- <td ng-bind-html="main.printEvolut(pokemon.evolut_chain, pokemon.name)"></td> -->
+      <td ng-bind-html="main.printEvolut(pokemon.evolut_chain, pokemon.name)"></td>
       <td>{{pokemon.base_hp}}</td>
       <td>{{pokemon.base_atk}}</td>
       <td>{{pokemon.base_def}}</td>

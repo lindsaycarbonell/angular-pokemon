@@ -135,30 +135,20 @@ var totalType = "";
 }
 
 this.printEvolut = function(givenDexNums, givenName){
-// console.log("print evolut");
-
-
+console.log("print evolut");
 var totalEvolut = "";
 
 //console.log("start printevolut with " + givenDexNums.length);
   //loop through given array of types
   for(var i=0; i<givenDexNums.length; i++){
+    nextDexNum = givenDexNums[i];
+     console.log("Given Name: " + givenName);
+    // console.log("All: " + givenDexNums);
+     console.log("Next: " + nextDexNum + " "+this.all_pokemon[nextDexNum-1].name);
 
-    this.nextDexNum = givenDexNums[i];
-    //console.log("Given Name: " + givenName);
-    //console.log("All: " + givenDexNums);
-    //console.log("Next: " + this.nextDexNum);
-
-    totalEvolut += "<p>" + this.all_pokemon[this.nextDexNum-1].name + "</p>";
-
-
+    totalEvolut += "<p>" + this.all_pokemon[nextDexNum-1].name + "</p>";
   }
-
   return totalEvolut;
-
-
-
-
 }
 
 this.setSort = function(columnName){
