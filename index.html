@@ -31,7 +31,7 @@ stats are based on Gen II.
     <div class="row">
       <div class="party-box" ng-class="{'col-lg-7 col-md-7 col-xs-7':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}">
       <!-- <div class="party-box" class="col-lg-7 col-md-7 col-xs-7"> -->
-      <div class="col-lg-1 col-md-1" style="max-width:80px;"ng-repeat="pokemon in main.caught_pokemon">
+      <div class="col-lg-1 col-md-1" style="max-width:80px;" ng-repeat="pokemon in main.caught_pokemon" ng-if="pokemon.name !== undefined">
 
           <!-- <img ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num)" /> -->
           <div style="overflow:auto;width:25px;">

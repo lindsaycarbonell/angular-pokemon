@@ -5,8 +5,7 @@ app.controller('MainController',[('$http'),function($http) {
 var _this = this;
 this.all_pokemon = [];
 this.caught_pokemon = [];
-//var caughtPokemonData
-//var allPokemonData
+
 
 $http.get('js/pokedex.json')
     .success(function(allPokemonData){
@@ -28,12 +27,6 @@ $http.get('js/caught.json')
     });
 
 
-
-
-
-// this.all_pokemon = allPokemonData;
-//this.caught_pokemon = caughtPokemonData;
-
 this.isPokemonChosen = false;
 this.chosenPartyPoke = null;
 this.clickedPokeCount = 0;
@@ -43,7 +36,7 @@ this.clickedPokemon = [];
 //shows pokemon party info box based on if a pokemon in the party was clicked
 this.showInfoBox = function(clickedPoke){
 
-  console.log("CLICK:");
+  // console.log("CLICK:");
 
   //push the clicked pokemon into an array
   this.clickedPokemon.push(clickedPoke);
@@ -52,9 +45,9 @@ this.showInfoBox = function(clickedPoke){
   this.previousPokemon = this.clickedPokemon[this.clickedPokemon.length-2];
   this.isPreviousExists = this.clickedPokemon.length >= 2;
 
-  console.log("you clicked on: " + clickedPoke);
-  console.log("previously you clicked on: " + this.previousPokemon);
-  console.log("isPokemonChosen: " + this.isPokemonChosen);
+  // console.log("you clicked on: " + clickedPoke);
+  // console.log("previously you clicked on: " + this.previousPokemon);
+  // console.log("isPokemonChosen: " + this.isPokemonChosen);
 
   // this.clickedPokeCount++;
   this.chosenPartyPoke = clickedPoke;
@@ -66,19 +59,52 @@ this.showInfoBox = function(clickedPoke){
 
   this.isPokemonChosen = !this.isPokemonChosen;
 
-  console.log("automatically switch to: " + this.isPokemonChosen);
-  console.log("isPokemonChosen: " + this.isPokemonChosen);
+  // console.log("automatically switch to: " + this.isPokemonChosen);
+  // console.log("isPokemonChosen: " + this.isPokemonChosen);
+
+  this.generateInfoBox(this.chosenPartyPoke);
 }
 
 this.generateInfoBox = function(){
+
   //console.log("generate");
 
-  return '<div class="info-box"><img src="assets/' +
-  this.chosenPartyPoke + '.png" /></div>';
+  // return '<div class="info-box"><img src="assets/' +
+  // this.chosenPartyPoke + '.png" /></div>';
+  // console.log(this.chosenPartyPoke);
+    console.log("sending in from generateInfoBox: " + this.chosenPartyPoke);
+  this.pokemonPath = this.getPokemonPathCaught(this.chosenPartyPoke);
+
+
+  return '<div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="nick-cell">' + this.pokemonPath.n_name + '</span>';
+//       <span class="level-cell">/Lv 35</span>
+//     </div>
+//   </div>
+//
+//   <ul class="move-box">
+//     <li class="move-cell">
+//       <span class="move-cell-type type bug">Bug</span>
+//       <span>Fury Cutter</span>
+//     </li>
+//
+//     <li class="move-cell">
+//       <span class="move-cell-type type grass">Grass</span>
+//       <span>Magical Leaf</span>
+//     </li>
+//     <li class="move-cell">
+//       <span class="move-cell-type type grass">Grass</span>
+//       <span>Absorb</span>
+//     </li>
+//     <li class="move-cell">
+//         <span class="move-cell-type type normal">Normal</span>
+//         <span>Cut</span>
+//     </li>
+//   </ul>
+// </div>
 
 
 
-  console.log(this.chosenPartyPoke);
+  // console.log(this.chosenPartyPoke);
 }
 
 //printTypes takes the types for a given pokemon and prints out
@@ -135,20 +161,52 @@ var totalType = "";
 }
 
 this.printEvolut = function(givenDexNums, givenName){
-console.log("print evolut");
-var totalEvolut = "";
+  // console.log("print evolut");
+  var totalEvolut = "";
 
-//console.log("start printevolut with " + givenDexNums.length);
+  //console.log("start printevolut with " + givenDexNums.length);
   //loop through given array of types
   for(var i=0; i<givenDexNums.length; i++){
     nextDexNum = givenDexNums[i];
-     console.log("Given Name: " + givenName);
+    // console.log("Given Name: " + givenName);
     // console.log("All: " + givenDexNums);
-     console.log("Next: " + nextDexNum + " "+this.all_pokemon[nextDexNum-1].name);
+    // console.log("Next: " + nextDexNum + " "+this.all_pokemon[nextDexNum-1].name);
+    // console.log("sending in from printEvolut: " + nextDexNum);
+    this.pokemonPath = this.getPokemonPathAll(nextDexNum);
 
-    totalEvolut += "<p>" + this.all_pokemon[nextDexNum-1].name + "</p>";
+    totalEvolut += "<p>" + this.pokemonPath.name + "</p>";
+
   }
   return totalEvolut;
+}
+
+//function to fix the issue of improperly indexed JSON files
+this.getPokemonPathAll = function(nextDexNum){
+  // console.log("get path where nextDexNum = " + nextDexNum);
+
+  for (var i = 0; i < this.all_pokemon.length; i++){
+
+    if (nextDexNum == this.all_pokemon[i].dex_num){
+      // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
+      return this.all_pokemon[nextDexNum-1];
+    }
+
+  }
+
+}
+
+this.getPokemonPathCaught = function(nextDexNum){
+  // console.log("get path where nextDexNum = " + nextDexNum);
+
+  for (var i = 0; i < this.caught_pokemon.length; i++){
+
+    if (nextDexNum == this.caught_pokemon[i].dex_num){
+      // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
+      return this.all_pokemon[nextDexNum-1];
+    }
+
+  }
+
 }
 
 this.setSort = function(columnName){
