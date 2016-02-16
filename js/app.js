@@ -5,6 +5,7 @@ app.controller('MainController',[('$http'),function($http) {
 var _this = this;
 this.all_pokemon = [];
 this.caught_pokemon = [];
+this.pokemon_moves = [];
 
 
 $http.get('js/pokedex.json')
@@ -19,11 +20,21 @@ $http.get('js/pokedex.json')
 $http.get('js/caught.json')
     .success(function(caughtPokemonData){
       _this.caught_pokemon = caughtPokemonData;
-      //console.log("caught: " + caughtPokemonData);
+      console.log("caught: " + caughtPokemonData[8].name);
     })
     .error(function(msg){
       console.log("Caught request failed. \n" + msg);
       console.log("caughtPokemonData" + caughtPokemonData);
+    });
+
+$http.get('js/movedex.json')
+    .success(function(pokemonMoveData){
+      _this.pokemon_moves = pokemonMoveData;
+      //console.log("caught: " + caughtPokemonData);
+    })
+    .error(function(msg){
+      console.log("Caught request failed. \n" + msg);
+      //console.log("pokemonMoveData" + pokemonMoveData);
     });
 
 
@@ -65,25 +76,20 @@ this.showInfoBox = function(clickedPoke){
   this.generateInfoBox(this.chosenPartyPoke);
 }
 
-this.generateInfoBox = function(){
+this.generateInfoBox = function(chosenPoke){
 
   //console.log("generate");
 
-  // return '<div class="info-box"><img src="assets/' +
-  // this.chosenPartyPoke + '.png" /></div>';
-  // console.log(this.chosenPartyPoke);
-    console.log("sending in from generateInfoBox: " + this.chosenPartyPoke);
-  this.pokemonPath = this.getPokemonPathCaught(this.chosenPartyPoke);
+  console.log("sending in from generateInfoBox: " + chosenPoke);
+  this.pokemonPath = this.getPokemonPathCaught(chosenPoke);
+
+  // console.log("path: " + this.pokemonPath.n_name);
+  console.log("move set: " + this.pokemonPath.move_set);
+
+  document.getElementById("add-info").innerHTML = '<div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="nick-cell">' + this.pokemonPath.n_name + '</span><span class="level-cell">Lv' +  this.pokemonPath.current_lvl + '</span></div></div><ul class="move-box">' + this.printMoves(this.pokemonPath.move_set) +  '</ul>';
 
 
-  return '<div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="nick-cell">' + this.pokemonPath.n_name + '</span>';
-//       <span class="level-cell">/Lv 35</span>
-//     </div>
-//   </div>
-//
-//   <ul class="move-box">
-//     <li class="move-cell">
-//       <span class="move-cell-type type bug">Bug</span>
+
 //       <span>Fury Cutter</span>
 //     </li>
 //
@@ -160,6 +166,30 @@ var totalType = "";
 
 }
 
+this.printMoves = function(moveSet){
+  console.log("print moves!");
+  var allMoves = "";
+
+  for(var i = 0; i < 4; i++){
+    // console.log("i loop");
+
+    for(var j = 0; j < this.pokemon_moves.length; j++){
+      // console.log("j loop");
+      //console.log(moveSet[i]);
+      //console.log(this.pokemon_moves[j]);
+
+      if(moveSet[i].localeCompare(this.pokemon_moves[j].name) == 0){
+        // console.log("ready to return");
+        // console.log(this.pokemon_moves[j].type);
+        allMoves += '<li class="move-cell"><span class="move-cell-type type ' + this.pokemon_moves[j].type + '">' + this.pokemon_moves[j].type + '</span><span>' + this.pokemon_moves[j].name + '</li>';
+
+      }
+    }
+
+  }
+  return allMoves;
+}
+
 this.printEvolut = function(givenDexNums, givenName){
   // console.log("print evolut");
   var totalEvolut = "";
@@ -202,12 +232,30 @@ this.getPokemonPathCaught = function(nextDexNum){
 
     if (nextDexNum == this.caught_pokemon[i].dex_num){
       // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
-      return this.all_pokemon[nextDexNum-1];
+      return this.caught_pokemon[nextDexNum-1];
     }
 
   }
 
 }
+
+this.getMovePath = function(moveName){
+  // console.log("get path where nextDexNum = " + nextDexNum);
+
+  for (var i = 0; i < this.pokemon_moves.length; i++){
+
+    //givenType.localeCompare(compareType)==0
+
+    if (moveName.localeCompare(this.pokemon_moves[i].name) === 0){
+      // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
+      return this.pokemon_moves[i];
+    }
+
+  }
+
+}
+
+
 
 this.setSort = function(columnName){
   console.log("setSort");

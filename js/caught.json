@@ -25,6 +25,73 @@
     "types" : [ "water" ]
   },
   {
+    "dex_num" : 148,
+    "current_lvl" : 34,
+    "inTeam" : true,
+    "move_set" : [ "Slam",
+        "Thunder Wave",
+        "Twister",
+        "Dragon Rage"
+      ],
+    "n_name" : "",
+    "name" : "Dragonair",
+    "types" : [ "dragon" ]
+  },
+  {
+    "dex_num" : 57,
+    "current_lvl" : 35,
+    "inTeam" : true,
+    "move_set" : [ "Rage",
+        "Seismic Toss",
+        "Karate Chop",
+        "Fury Swipes"
+      ],
+    "n_name" : "",
+    "name" : "Primeape",
+    "types" : [ "fight" ]
+  },
+  {
+    "dex_num" : 64,
+    "current_lvl" : 34,
+    "inTeam" : true,
+    "move_set" : [ "Recover",
+        "Disable",
+        "Psybeam",
+        "Future Sight"
+      ],
+    "n_name" : "",
+    "name" : "Kadabra",
+    "types" : [ "psychic" ]
+  },
+  {
+    "dex_num" : 20,
+    "current_lvl" : 35,
+    "inTeam" : true,
+    "move_set" : [ "Pursuit",
+        "Cut",
+        "Quick Attack",
+        "Hyper Fang"
+      ],
+    "n_name" : "Fluffy",
+    "name" : "Raticate",
+    "types" : [ "normal" ]
+  },
+  {
+    "dex_num" : 79,
+    "current_lvl" : 31,
+    "inTeam" : true,
+    "move_set" : [ "Surf",
+        "Headbutt",
+        "Confusion",
+        "Disable"
+      ],
+    "n_name" : "",
+    "name" : "Slowpoke",
+    "types" : [ "water",
+        "psychic"
+      ]
+  },
+  {
     "dex_num" : 12,
     "current_lvl" : 35,
     "inTeam" : false,
@@ -54,18 +121,44 @@
         "flying"
       ]
   },
-    {
-    "dex_num" : 20,
+  {
+    "dex_num" : 97,
     "current_lvl" : 35,
-    "inTeam" : true,
-    "move_set" : [ "Pursuit",
-        "Cut",
-        "Quick Attack",
-        "Hyper Fang"
+    "inTeam" : false,
+    "move_set" : [ "Headbutt",
+        "Meditate",
+        "Disable",
+        "Psychic"
       ],
-    "n_name" : "Fluffy",
-    "name" : "Raticate",
-    "types" : [ "normal" ]
+    "n_name" : "D'Eater",
+    "name" : "Hypno",
+    "types" : [ "psychic" ]
+  },
+  {
+    "dex_num" : 51,
+    "current_lvl" : 35,
+    "inTeam" : false,
+    "move_set" : [ "Dig",
+        "Fury Swipes",
+        "Mud-Slap",
+        "Sand Tomb"
+      ],
+    "n_name" : "",
+    "name" : "Dugtrio",
+    "types" : [ "ground" ]
+  },
+  {
+    "dex_num" : 135,
+    "current_lvl" : 35,
+    "inTeam" : false,
+    "move_set" : [ "Double Kick",
+        "Sand-Attack",
+        "Shock Wave",
+        "Quick Attack"
+      ],
+    "n_name" : "",
+    "name" : "Jolteon",
+    "types" : [ "electric" ]
   },
   {
     "dex_num" : 37,
@@ -79,98 +172,5 @@
     "n_name" : "Pixa",
     "name" : "Vulpix",
     "types" : [ "fire" ]
-  },
-    {
-    "dex_num" : 51,
-    "current_lvl" : 35,
-    "inTeam" : false,
-    "move_set" : [ "Dig",
-        "Fury Swipes",
-        "Mud-Slap",
-        "Sand Tomb"
-      ],
-    "n_name" : "",
-    "name" : "Dugtrio",
-    "types" : [ "ground" ]
-  },
-    {
-    "dex_num" : 57,
-    "current_lvl" : 35,
-    "inTeam" : true,
-    "move_set" : [ "Rage",
-        "Seismic Toss",
-        "Karate Chop",
-        "Fury Swipes"
-      ],
-    "n_name" : "",
-    "name" : "Primeape",
-    "types" : [ "fight" ]
-  },
-    {
-    "dex_num" : 64,
-    "current_lvl" : 34,
-    "inTeam" : true,
-    "move_set" : [ "Recover",
-        "Disable",
-        "Psybeam",
-        "Future Sight"
-      ],
-    "n_name" : "",
-    "name" : "Kadabra",
-    "types" : [ "psychic" ]
-  },
-    {
-    "dex_num" : 79,
-    "current_lvl" : 31,
-    "inTeam" : true,
-    "move_set" : [ "Surf",
-        "Headbutt",
-        "Confusion",
-        "Disable"
-      ],
-    "n_name" : "",
-    "name" : "Slowpoke",
-    "types" : [ "water",
-        "psychic"
-      ]
-  },
-    {
-    "dex_num" : 97,
-    "current_lvl" : 35,
-    "inTeam" : false,
-    "move_set" : [ "Headbutt",
-        "Meditate",
-        "Disable",
-        "Psychic"
-      ],
-    "n_name" : "D'Eater",
-    "name" : "Hypno",
-    "types" : [ "psychic" ]
-  },
-    {
-    "dex_num" : 135,
-    "current_lvl" : 35,
-    "inTeam" : false,
-    "move_set" : [ "Double Kick",
-        "Sand-Attack",
-        "Shock Wave",
-        "Quick Attack"
-      ],
-    "n_name" : "",
-    "name" : "Jolteon",
-    "types" : [ "electric" ]
-  },
-    {
-    "dex_num" : 148,
-    "current_lvl" : 34,
-    "inTeam" : true,
-    "move_set" : [ "Slam",
-        "Thunder Wave",
-        "Twister",
-        "Dragon Rage"
-      ],
-    "n_name" : "",
-    "name" : "Dragonair",
-    "types" : [ "dragon" ]
   }
 ]
