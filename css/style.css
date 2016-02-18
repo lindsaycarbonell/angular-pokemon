@@ -3,9 +3,19 @@
 
 body{
   font-family:'Ubuntu';
+  /*background-image: url('../assets/poke_clouds.png'), url('../assets/poke_grass.png');
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;*/
+  background-image: url('../assets/poke_clouds.png'), url('../assets/poke_bottom.png');
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+  background-color: #79c9f9;
 }
 body:hover, table:hover, div:hover{
   cursor:default;
+}
+table{
+
 }
 
 .pokebox-gif{
