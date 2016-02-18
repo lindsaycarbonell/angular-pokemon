@@ -100,6 +100,7 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
       <th ng-click="main.setSort('dex_num')">Dex Number</th>
       <th></th>
       <th ng-click="main.setSort('name')">Name</th>
+      <th>Caught</th>
       <th>Types</th>
       <th ng-click="main.setSort('location')">Location</th>
       <th>Evolutionary Chain</th>
@@ -117,9 +118,16 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
       <!--sprites from pokestadium.com-->
       <td><img ng-src="assets/{{pokemon.dex_num}}.gif" /></td>
       <td>{{pokemon.name}}</td>
+      <td>
+        <div ng-click="main.setCaught()" class="checkbox">
+          <label>
+            <input type="checkbox">
+          </label>
+        </div>
+      </td>
       <td ng-bind-html="main.printTypes(pokemon.types)"></td>
       <td>{{pokemon.location}}</td>
-      <td ng-bind-html="main.printEvolut(pokemon.evolut_chain, pokemon.name)"></td>
+      <td ng-bind-html="main.printEvolut(pokemon.evolut_chain)"></td>
       <td>{{pokemon.base_hp}}</td>
       <td>{{pokemon.base_atk}}</td>
       <td>{{pokemon.base_def}}</td>

@@ -215,12 +215,12 @@ this.printEvolut = function(givenDexNums){
   //console.log("start printevolut with " + givenDexNums.length);
   //loop through given array of types
   for(var i = 0; i < givenDexNums.length; i++){
-    nextDexNum = givenDexNums[i];
+    this.nextDexNum = givenDexNums[i];
     // console.log("Given Name: " + givenName);
     // console.log("All: " + givenDexNums);
     // console.log("Next: " + nextDexNum + " "+this.all_pokemon[nextDexNum-1].name);
     // console.log("sending in from printEvolut: " + nextDexNum);
-    this.pokemonPath = this.getPokemonPathAll(nextDexNum);
+    this.pokemonPath = this.getPokemonPathAll(this.nextDexNum);
 
     totalEvolut += "<p>" + this.pokemonPath.name + "</p>";
 
@@ -236,7 +236,7 @@ this.getPokemonPathAll = function(nextDexNum){
 
     if (nextDexNum == this.all_pokemon[i].dex_num){
       // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
-      return this.all_pokemon[nextDexNum-1];
+      return this.all_pokemon[i];
     }
 
   }
@@ -250,7 +250,7 @@ this.getPokemonPathCaught = function(nextDexNum){
 
     if (nextDexNum == this.caught_pokemon[i].dex_num){
       // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
-      return this.caught_pokemon[nextDexNum-1];
+      return this.caught_pokemon[i];
     }
 
   }
@@ -273,6 +273,15 @@ this.getMovePath = function(moveName){
 
 }
 
+this.setCaught = function(){
+
+  $('.checkbox').change(function(){
+    console.log("checkbox changed!");
+    // var c = this.checked ? '#f00' : '#09f';
+    // $('p').css('color', c);
+  });
+
+}
 
 
 this.setSort = function(columnName){
