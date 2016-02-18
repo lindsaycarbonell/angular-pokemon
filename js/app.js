@@ -87,7 +87,7 @@ this.generateInfoBox = function(chosenPoke){
   // console.log("path: " + this.pokemonPath.n_name);
   console.log("move set: " + this.pokemonPath.move_set);
 
-  document.getElementById("add-info").innerHTML = '<div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="nick-cell">' + this.pokemonPath.n_name + '</span><span class="level-cell">Lv' +  this.pokemonPath.current_lvl + '</span></div></div><ul class="move-box">' + this.printMoves(this.pokemonPath.move_set) +  '</ul>';
+  document.getElementById("add-info").innerHTML = '<div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.getN_Name() + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="level-cell">Lv' +  this.pokemonPath.current_lvl + '</span></div></div><ul class="move-box">' + this.printMoves(this.pokemonPath.move_set) +  '</ul>';
 
 
 
@@ -112,6 +112,17 @@ this.generateInfoBox = function(chosenPoke){
 
 
   // console.log(this.chosenPartyPoke);
+}
+
+
+this.getN_Name = function(){
+  console.log("nick name: " + this.pokemonPath.n_name);
+  if(this.pokemonPath.n_name){
+    console.log("about to return a name");
+    return  '<span class="nick-cell">/&#8220;' + this.pokemonPath.n_name + '&#8221;</span>';
+  }
+  else return '<span style="padding-right:20px;"></span>';
+
 }
 
 //printTypes takes the types for a given pokemon and prints out

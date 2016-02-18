@@ -55,8 +55,9 @@ div#add-info{
 
 .name-cell{
   /*text-align:center;*/
+
   display:table-cell;
-  vertical-align: bottom;
+  vertical-align: text-bottom;
   font-size:15pt;
 }
 
@@ -96,7 +97,11 @@ div#add-info{
 }
 .nick-cell{
   display:table-cell;
+  font-size:15pt;
+  padding-right:20px;
+  vertical-align:text-bottom;
 }
+
 
 
 
@@ -141,11 +146,12 @@ div#add-info{
 .party-cont{
   max-width:800px;
   margin-top:40px;
-  padding:20px;
+  padding:10px;
 }
 
 /*CSS for type boxes from PokemonShowdown.com*/
 .type {
+    vertical-align: text-bottom;
     display: inline-block;
     width: 60px;
     height: 20px;
