@@ -14,13 +14,24 @@ body{
 body:hover, table:hover, div:hover{
   cursor:default;
 }
-table{
-
-}
 
 .pokebox-gif{
   vertical-align:bottom;
   /*border-bottom:1px solid black;*/
+}
+
+.pokebox-gif:hover{
+  border-bottom:3px solid black;
+}
+
+.select-poke{
+  padding:3px;
+  padding-bottom:0;
+  background-color:#daa520;
+}
+
+.select-poke:hover{
+  border-bottom:none;!important
 }
 
 .vert-centered {
@@ -126,13 +137,14 @@ div#add-info{
 }
 
 .poke-wrapper-wide{
-  margin-left: 20%;
+  margin-left: 12%;
   margin-right: 12%;
 }
 
 .poke-wrapper-tall{
   margin-left:12%;
   margin-right:12%;
+  margin-top:16%;
 }
 
 #party-box-title{

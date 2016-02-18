@@ -125,6 +125,12 @@ this.getN_Name = function(){
 
 }
 
+this.showHighlight = function(dex_num){
+  if(this.chosenPartyPoke == dex_num && document.getElementById('add-info').style.visibility == "visible"){
+    return true;
+  }
+}
+
 //printTypes takes the types for a given pokemon and prints out
 //the stylized type boxes into the Pokedex table
 
