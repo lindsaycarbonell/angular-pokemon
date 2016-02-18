@@ -8,6 +8,11 @@ body:hover, table:hover, div:hover{
   cursor:default;
 }
 
+.pokebox-gif{
+  vertical-align:bottom;
+  /*border-bottom:1px solid black;*/
+}
+
 .vert-centered {
   display: table-cell;
   /*vertical-align: middle;*/
@@ -22,16 +27,20 @@ body:hover, table:hover, div:hover{
   display:table;
 }
 
+div#add-info{
+  height:400px;
+}
+
 .img-cell, .level-cell, .move-box, .type-cell{
   display:table-row;
 }
 .img-cell{
   margin-left:-5%;
   padding: 20px;
-  background-color: white;
-  border-radius: 50%;
+  /*background-color: white;*/
+  /*border-radius: 50%;
 	width: 200px;
-	height: 200px;
+	height: 200px;*/
 }
 
 .name-cell{
@@ -81,9 +90,42 @@ body:hover, table:hover, div:hover{
 
 
 
-.party-box{
-  background-color:#999;
+.party-box-wide, .party-box-tall{
+  background-image: url('../assets/grass_txt.png');
+  border: 3px solid #78a068;
+
+  /*background-color:#999;*/
   /*transition: all 0.3s;*/
+}
+
+.party-box-wide{
+  height:200px;
+}
+
+.party-box-tall{
+  height:400px;
+}
+
+.poke-wrapper-wide, .poke-wrapper-tall{
+  margin-top:3%;
+}
+
+.poke-wrapper-wide{
+  margin-left: 20%;
+  margin-right: 12%;
+}
+
+.poke-wrapper-tall{
+  margin-left:12%;
+  margin-right:12%;
+}
+
+#party-box-title{
+  margin-bottom: -30px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #daa520;
+  padding:8px;
 }
 
 .party-cont{

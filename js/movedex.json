@@ -1,7 +1,7 @@
 [
   {
     "name":"Absorb",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Special",
     "power":20,
     "acc":100,
@@ -10,7 +10,7 @@
   },
   {
     "name":"Acid",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Special",
     "power":40,
     "acc":100,
@@ -19,7 +19,7 @@
   },
   {
     "name":"Acid Armor",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -28,7 +28,7 @@
   },
   {
     "name":"Agility",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -37,7 +37,7 @@
   },
   {
     "name":"Amnesia",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -46,7 +46,7 @@
   },
   {
     "name":"Aurora Beam",
-    "type":"Ice",
+    "type":"ice",
     "cat":"Special",
     "power":65,
     "acc":100,
@@ -55,7 +55,7 @@
   },
   {
     "name":"Barrage",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":15,
     "acc":85,
@@ -64,7 +64,7 @@
   },
   {
     "name":"Barrier",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -73,7 +73,7 @@
   },
   {
     "name":"Bide",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":null,
     "acc":null,
@@ -82,7 +82,7 @@
   },
   {
     "name":"Bind",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":15,
     "acc":85,
@@ -91,7 +91,7 @@
   },
   {
     "name":"Bite",
-    "type":"Dark",
+    "type":"dark",
     "cat":"Physical",
     "power":60,
     "acc":100,
@@ -100,7 +100,7 @@
   },
   {
     "name":"Blizzard",
-    "type":"Ice",
+    "type":"ice",
     "cat":"Special",
     "power":110,
     "acc":70,
@@ -109,7 +109,7 @@
   },
   {
     "name":"Body Slam",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":85,
     "acc":100,
@@ -118,7 +118,7 @@
   },
   {
     "name":"Bone Club",
-    "type":"Ground",
+    "type":"ground",
     "cat":"Physical",
     "power":65,
     "acc":85,
@@ -127,7 +127,7 @@
   },
   {
     "name":"Bonemerang",
-    "type":"Ground",
+    "type":"ground",
     "cat":"Physical",
     "power":50,
     "acc":90,
@@ -136,7 +136,7 @@
   },
   {
     "name":"Bubble",
-    "type":"Water",
+    "type":"water",
     "cat":"Special",
     "power":40,
     "acc":100,
@@ -145,7 +145,7 @@
   },
   {
     "name":"Bubble Beam",
-    "type":"Water",
+    "type":"water",
     "cat":"Special",
     "power":65,
     "acc":100,
@@ -154,7 +154,7 @@
   },
   {
     "name":"Clamp",
-    "type":"Water",
+    "type":"water",
     "cat":"Physical",
     "power":35,
     "acc":85,
@@ -163,7 +163,7 @@
   },
   {
     "name":"Comet Punch",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":18,
     "acc":85,
@@ -172,7 +172,7 @@
   },
   {
     "name":"Confuse Ray",
-    "type":"Ghost",
+    "type":"ghost",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -181,7 +181,7 @@
   },
   {
     "name":"Confusion",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Special",
     "power":50,
     "acc":100,
@@ -190,7 +190,7 @@
   },
   {
     "name":"Constrict",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":10,
     "acc":100,
@@ -199,7 +199,7 @@
   },
   {
     "name":"Conversion",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -208,7 +208,7 @@
   },
   {
     "name":"Counter",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":null,
     "acc":100,
@@ -217,7 +217,7 @@
   },
   {
     "name":"Crabhammer",
-    "type":"Water",
+    "type":"water",
     "cat":"Physical",
     "power":100,
     "acc":90,
@@ -226,7 +226,7 @@
   },
   {
     "name":"Cut",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":50,
     "acc":95,
@@ -235,7 +235,7 @@
   },
   {
     "name":"Defense Curl",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -244,7 +244,7 @@
   },
   {
     "name":"Dig",
-    "type":"Ground",
+    "type":"ground",
     "cat":"Physical",
     "power":80,
     "acc":100,
@@ -253,7 +253,7 @@
   },
   {
     "name":"Disable",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -262,7 +262,7 @@
   },
   {
     "name":"Dizzy Punch",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":70,
     "acc":100,
@@ -271,7 +271,7 @@
   },
   {
     "name":"Double Kick",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":30,
     "acc":100,
@@ -280,7 +280,7 @@
   },
   {
     "name":"Double Slap",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":15,
     "acc":85,
@@ -289,7 +289,7 @@
   },
   {
     "name":"Double Team",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -298,7 +298,7 @@
   },
   {
     "name":"Double-Edge",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":120,
     "acc":100,
@@ -307,7 +307,7 @@
   },
   {
     "name":"Dragon Rage",
-    "type":"Dragon",
+    "type":"dragon",
     "cat":"Special",
     "power":null,
     "acc":100,
@@ -316,7 +316,7 @@
   },
   {
     "name":"Dream Eater",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Special",
     "power":100,
     "acc":100,
@@ -325,7 +325,7 @@
   },
   {
     "name":"Drill Peck",
-    "type":"Flying",
+    "type":"flying",
     "cat":"Physical",
     "power":80,
     "acc":100,
@@ -334,7 +334,7 @@
   },
   {
     "name":"Earthquake",
-    "type":"Ground",
+    "type":"ground",
     "cat":"Physical",
     "power":100,
     "acc":100,
@@ -343,7 +343,7 @@
   },
   {
     "name":"Egg Bomb",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":100,
     "acc":75,
@@ -352,7 +352,7 @@
   },
   {
     "name":"Ember",
-    "type":"Fire",
+    "type":"fire",
     "cat":"Special",
     "power":40,
     "acc":100,
@@ -361,7 +361,7 @@
   },
   {
     "name":"Explosion",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":250,
     "acc":100,
@@ -370,7 +370,7 @@
   },
   {
     "name":"Fire Blast",
-    "type":"Fire",
+    "type":"fire",
     "cat":"Special",
     "power":110,
     "acc":85,
@@ -379,7 +379,7 @@
   },
   {
     "name":"Fire Punch",
-    "type":"Fire",
+    "type":"fire",
     "cat":"Physical",
     "power":75,
     "acc":100,
@@ -388,7 +388,7 @@
   },
   {
     "name":"Fire Spin",
-    "type":"Fire",
+    "type":"fire",
     "cat":"Special",
     "power":35,
     "acc":85,
@@ -397,7 +397,7 @@
   },
   {
     "name":"Fissure",
-    "type":"Ground",
+    "type":"ground",
     "cat":"Physical",
     "power":null,
     "acc":null,
@@ -406,7 +406,7 @@
   },
   {
     "name":"Flamethrower",
-    "type":"Fire",
+    "type":"fire",
     "cat":"Special",
     "power":90,
     "acc":100,
@@ -415,7 +415,7 @@
   },
   {
     "name":"Flash",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -424,7 +424,7 @@
   },
   {
     "name":"Fly",
-    "type":"Flying",
+    "type":"flying",
     "cat":"Physical",
     "power":90,
     "acc":95,
@@ -433,7 +433,7 @@
   },
   {
     "name":"Focus Energy",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -442,7 +442,7 @@
   },
   {
     "name":"Fury Attack",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":15,
     "acc":85,
@@ -451,7 +451,7 @@
   },
   {
     "name":"Fury Swipes",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":18,
     "acc":80,
@@ -460,7 +460,7 @@
   },
   {
     "name":"Glare",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -469,7 +469,7 @@
   },
   {
     "name":"Growl",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -478,7 +478,7 @@
   },
   {
     "name":"Growth",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -487,7 +487,7 @@
   },
   {
     "name":"Guillotine",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":null,
     "acc":null,
@@ -496,7 +496,7 @@
   },
   {
     "name":"Gust",
-    "type":"Flying",
+    "type":"flying",
     "cat":"Special",
     "power":40,
     "acc":100,
@@ -505,7 +505,7 @@
   },
   {
     "name":"Harden",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -514,7 +514,7 @@
   },
   {
     "name":"Haze",
-    "type":"Ice",
+    "type":"ice",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -523,7 +523,7 @@
   },
   {
     "name":"Headbutt",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":70,
     "acc":100,
@@ -532,7 +532,7 @@
   },
   {
     "name":"High Jump Kick",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":130,
     "acc":90,
@@ -541,7 +541,7 @@
   },
   {
     "name":"Horn Attack",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":65,
     "acc":100,
@@ -550,7 +550,7 @@
   },
   {
     "name":"Horn Drill",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":null,
     "acc":null,
@@ -559,7 +559,7 @@
   },
   {
     "name":"Hydro Pump",
-    "type":"Water",
+    "type":"water",
     "cat":"Special",
     "power":110,
     "acc":80,
@@ -568,7 +568,7 @@
   },
   {
     "name":"Hyper Beam",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Special",
     "power":150,
     "acc":90,
@@ -577,7 +577,7 @@
   },
   {
     "name":"Hyper Fang",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":80,
     "acc":90,
@@ -586,7 +586,7 @@
   },
   {
     "name":"Hypnosis",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":60,
@@ -595,7 +595,7 @@
   },
   {
     "name":"Ice Beam",
-    "type":"Ice",
+    "type":"ice",
     "cat":"Special",
     "power":90,
     "acc":100,
@@ -604,7 +604,7 @@
   },
   {
     "name":"Ice Punch",
-    "type":"Ice",
+    "type":"ice",
     "cat":"Physical",
     "power":75,
     "acc":100,
@@ -613,7 +613,7 @@
   },
   {
     "name":"Jump Kick",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":100,
     "acc":95,
@@ -622,7 +622,7 @@
   },
   {
     "name":"Karate Chop",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":50,
     "acc":100,
@@ -631,7 +631,7 @@
   },
   {
     "name":"Kinesis",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":80,
@@ -640,7 +640,7 @@
   },
   {
     "name":"Leech Life",
-    "type":"Bug",
+    "type":"bug",
     "cat":"Physical",
     "power":20,
     "acc":100,
@@ -649,7 +649,7 @@
   },
   {
     "name":"Leech Seed",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Status",
     "power":null,
     "acc":90,
@@ -658,7 +658,7 @@
   },
   {
     "name":"Leer",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -667,7 +667,7 @@
   },
   {
     "name":"Lick",
-    "type":"Ghost",
+    "type":"ghost",
     "cat":"Physical",
     "power":30,
     "acc":100,
@@ -676,7 +676,7 @@
   },
   {
     "name":"Light Screen",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -685,7 +685,7 @@
   },
   {
     "name":"Lovely Kiss",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":75,
@@ -694,7 +694,7 @@
   },
   {
     "name":"Low Kick",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":null,
     "acc":100,
@@ -703,7 +703,7 @@
   },
   {
     "name":"Meditate",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -712,7 +712,7 @@
   },
   {
     "name":"Mega Drain",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Special",
     "power":40,
     "acc":100,
@@ -721,7 +721,7 @@
   },
   {
     "name":"Mega Kick",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":120,
     "acc":75,
@@ -730,7 +730,7 @@
   },
   {
     "name":"Mega Punch",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":80,
     "acc":85,
@@ -739,7 +739,7 @@
   },
   {
     "name":"Metronome",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -748,7 +748,7 @@
   },
   {
     "name":"Mimic",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -757,7 +757,7 @@
   },
   {
     "name":"Minimize",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -766,7 +766,7 @@
   },
   {
     "name":"Mirror Move",
-    "type":"Flying",
+    "type":"flying",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -775,7 +775,7 @@
   },
   {
     "name":"Mist",
-    "type":"Ice",
+    "type":"ice",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -784,7 +784,7 @@
   },
   {
     "name":"Night Shade",
-    "type":"Ghost",
+    "type":"ghost",
     "cat":"Special",
     "power":null,
     "acc":100,
@@ -793,7 +793,7 @@
   },
   {
     "name":"Pay Day",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":40,
     "acc":100,
@@ -802,7 +802,7 @@
   },
   {
     "name":"Peck",
-    "type":"Flying",
+    "type":"flying",
     "cat":"Physical",
     "power":35,
     "acc":100,
@@ -811,7 +811,7 @@
   },
   {
     "name":"Petal Dance",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Special",
     "power":120,
     "acc":100,
@@ -820,7 +820,7 @@
   },
   {
     "name":"Pin Missile",
-    "type":"Bug",
+    "type":"bug",
     "cat":"Physical",
     "power":25,
     "acc":95,
@@ -829,7 +829,7 @@
   },
   {
     "name":"Poison Gas",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Status",
     "power":null,
     "acc":90,
@@ -838,7 +838,7 @@
   },
   {
     "name":"Poison Powder",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Status",
     "power":null,
     "acc":75,
@@ -847,7 +847,7 @@
   },
   {
     "name":"Poison Sting",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Physical",
     "power":15,
     "acc":100,
@@ -856,7 +856,7 @@
   },
   {
     "name":"Pound",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":40,
     "acc":100,
@@ -865,7 +865,7 @@
   },
   {
     "name":"Psybeam",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Special",
     "power":65,
     "acc":100,
@@ -873,8 +873,8 @@
     "effect":"May confuse opponent."
   },
   {
-    "name":"Psychic",
-    "type":"Psychic",
+    "name":"psychic",
+    "type":"psychic",
     "cat":"Special",
     "power":90,
     "acc":100,
@@ -883,7 +883,7 @@
   },
   {
     "name":"Psywave",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Special",
     "power":null,
     "acc":80,
@@ -892,7 +892,7 @@
   },
   {
     "name":"Quick Attack",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":40,
     "acc":100,
@@ -901,7 +901,7 @@
   },
   {
     "name":"Rage",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":20,
     "acc":100,
@@ -910,7 +910,7 @@
   },
   {
     "name":"Razor Leaf",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Physical",
     "power":55,
     "acc":95,
@@ -919,7 +919,7 @@
   },
   {
     "name":"Razor Wind",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Special",
     "power":80,
     "acc":100,
@@ -928,7 +928,7 @@
   },
   {
     "name":"Recover",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -937,7 +937,7 @@
   },
   {
     "name":"Reflect",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -946,7 +946,7 @@
   },
   {
     "name":"Rest",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -955,7 +955,7 @@
   },
   {
     "name":"Roar",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -964,7 +964,7 @@
   },
   {
     "name":"Rock Slide",
-    "type":"Rock",
+    "type":"rock",
     "cat":"Physical",
     "power":75,
     "acc":90,
@@ -973,7 +973,7 @@
   },
   {
     "name":"Rock Throw",
-    "type":"Rock",
+    "type":"rock",
     "cat":"Physical",
     "power":50,
     "acc":90,
@@ -982,7 +982,7 @@
   },
   {
     "name":"Rolling Kick",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":60,
     "acc":85,
@@ -990,8 +990,8 @@
     "effect":"May cause flinching."
   },
   {
-    "name":"Sand Attack",
-    "type":"Ground",
+    "name":"Sand-Attack",
+    "type":"ground",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -1000,7 +1000,7 @@
   },
   {
     "name":"Scratch",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":40,
     "acc":100,
@@ -1009,7 +1009,7 @@
   },
   {
     "name":"Screech",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":85,
@@ -1018,7 +1018,7 @@
   },
   {
     "name":"Seismic Toss",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":null,
     "acc":100,
@@ -1027,7 +1027,7 @@
   },
   {
     "name":"Self-Destruct",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":200,
     "acc":100,
@@ -1036,7 +1036,7 @@
   },
   {
     "name":"Sharpen",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1045,7 +1045,7 @@
   },
   {
     "name":"Sing",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":55,
@@ -1054,7 +1054,7 @@
   },
   {
     "name":"Skull Bash",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":130,
     "acc":100,
@@ -1063,7 +1063,7 @@
   },
   {
     "name":"Sky Attack",
-    "type":"Flying",
+    "type":"flying",
     "cat":"Physical",
     "power":140,
     "acc":90,
@@ -1072,7 +1072,7 @@
   },
   {
     "name":"Slam",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":80,
     "acc":75,
@@ -1081,7 +1081,7 @@
   },
   {
     "name":"Slash",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":70,
     "acc":100,
@@ -1090,7 +1090,7 @@
   },
   {
     "name":"Sleep Powder",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Status",
     "power":null,
     "acc":75,
@@ -1099,7 +1099,7 @@
   },
   {
     "name":"Sludge",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Special",
     "power":65,
     "acc":100,
@@ -1108,7 +1108,7 @@
   },
   {
     "name":"Smog",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Special",
     "power":30,
     "acc":70,
@@ -1117,7 +1117,7 @@
   },
   {
     "name":"Smokescreen",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -1126,7 +1126,7 @@
   },
   {
     "name":"Soft-Boiled",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1135,7 +1135,7 @@
   },
   {
     "name":"Solar Beam",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Special",
     "power":120,
     "acc":100,
@@ -1144,7 +1144,7 @@
   },
   {
     "name":"Sonic Boom",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Special",
     "power":null,
     "acc":90,
@@ -1153,7 +1153,7 @@
   },
   {
     "name":"Spike Cannon",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":20,
     "acc":100,
@@ -1162,7 +1162,7 @@
   },
   {
     "name":"Splash",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1171,7 +1171,7 @@
   },
   {
     "name":"Spore",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -1180,7 +1180,7 @@
   },
   {
     "name":"Stomp",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":65,
     "acc":100,
@@ -1189,7 +1189,7 @@
   },
   {
     "name":"Strength",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":80,
     "acc":100,
@@ -1198,7 +1198,7 @@
   },
   {
     "name":"String Shot",
-    "type":"Bug",
+    "type":"bug",
     "cat":"Status",
     "power":null,
     "acc":95,
@@ -1207,7 +1207,7 @@
   },
   {
     "name":"Struggle",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":50,
     "acc":100,
@@ -1216,7 +1216,7 @@
   },
   {
     "name":"Stun Spore",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Status",
     "power":null,
     "acc":75,
@@ -1225,7 +1225,7 @@
   },
   {
     "name":"Submission",
-    "type":"Fighting",
+    "type":"fighting",
     "cat":"Physical",
     "power":80,
     "acc":80,
@@ -1234,7 +1234,7 @@
   },
   {
     "name":"Substitute",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1243,7 +1243,7 @@
   },
   {
     "name":"Super Fang",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":null,
     "acc":90,
@@ -1252,7 +1252,7 @@
   },
   {
     "name":"Supersonic",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":55,
@@ -1261,7 +1261,7 @@
   },
   {
     "name":"Surf",
-    "type":"Water",
+    "type":"water",
     "cat":"Special",
     "power":90,
     "acc":100,
@@ -1270,7 +1270,7 @@
   },
   {
     "name":"Swift",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Special",
     "power":60,
     "acc":null,
@@ -1279,7 +1279,7 @@
   },
   {
     "name":"Swords Dance",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1288,7 +1288,7 @@
   },
   {
     "name":"Tackle",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":50,
     "acc":100,
@@ -1297,7 +1297,7 @@
   },
   {
     "name":"Tail Whip",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -1306,7 +1306,7 @@
   },
   {
     "name":"Take Down",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":90,
     "acc":85,
@@ -1315,7 +1315,7 @@
   },
   {
     "name":"Teleport",
-    "type":"Psychic",
+    "type":"psychic",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1324,7 +1324,7 @@
   },
   {
     "name":"Thrash",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":120,
     "acc":100,
@@ -1333,7 +1333,7 @@
   },
   {
     "name":"Thunder",
-    "type":"Electric",
+    "type":"electric",
     "cat":"Special",
     "power":110,
     "acc":70,
@@ -1342,7 +1342,7 @@
   },
   {
     "name":"Thunder Punch",
-    "type":"Electric",
+    "type":"electric",
     "cat":"Physical",
     "power":75,
     "acc":100,
@@ -1351,7 +1351,7 @@
   },
   {
     "name":"Thunder Shock",
-    "type":"Electric",
+    "type":"electric",
     "cat":"Special",
     "power":40,
     "acc":100,
@@ -1360,7 +1360,7 @@
   },
   {
     "name":"Thunder Wave",
-    "type":"Electric",
+    "type":"electric",
     "cat":"Status",
     "power":null,
     "acc":100,
@@ -1369,7 +1369,7 @@
   },
   {
     "name":"Thunderbolt",
-    "type":"Electric",
+    "type":"electric",
     "cat":"Special",
     "power":90,
     "acc":100,
@@ -1378,7 +1378,7 @@
   },
   {
     "name":"Toxic",
-    "type":"Poison",
+    "type":"poison",
     "cat":"Status",
     "power":null,
     "acc":90,
@@ -1387,7 +1387,7 @@
   },
   {
     "name":"Transform",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1396,7 +1396,7 @@
   },
   {
     "name":"Tri Attack",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Special",
     "power":80,
     "acc":100,
@@ -1405,7 +1405,7 @@
   },
   {
     "name":"Twineedle",
-    "type":"Bug",
+    "type":"bug",
     "cat":"Physical",
     "power":25,
     "acc":100,
@@ -1414,7 +1414,7 @@
   },
   {
     "name":"Vice Grip",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":55,
     "acc":100,
@@ -1423,7 +1423,7 @@
   },
   {
     "name":"Vine Whip",
-    "type":"Grass",
+    "type":"grass",
     "cat":"Physical",
     "power":45,
     "acc":100,
@@ -1432,7 +1432,7 @@
   },
   {
     "name":"Water Gun",
-    "type":"Water",
+    "type":"water",
     "cat":"Special",
     "power":40,
     "acc":100,
@@ -1441,7 +1441,7 @@
   },
   {
     "name":"Waterfall",
-    "type":"Water",
+    "type":"water",
     "cat":"Physical",
     "power":80,
     "acc":100,
@@ -1450,7 +1450,7 @@
   },
   {
     "name":"Whirlwind",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1459,7 +1459,7 @@
   },
   {
     "name":"Wing Attack",
-    "type":"Flying",
+    "type":"flying",
     "cat":"Physical",
     "power":60,
     "acc":100,
@@ -1468,7 +1468,7 @@
   },
   {
     "name":"Withdraw",
-    "type":"Water",
+    "type":"water",
     "cat":"Status",
     "power":null,
     "acc":null,
@@ -1477,7 +1477,7 @@
   },
   {
     "name":"Wrap",
-    "type":"Normal",
+    "type":"normal",
     "cat":"Physical",
     "power":15,
     "acc":90,

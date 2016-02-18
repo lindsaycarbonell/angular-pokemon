@@ -23,22 +23,30 @@ stats are based on Gen II.
 
 <body ng-app="mainApp">
 
-  <h1 style="text-align:center;">Pokemon Red/Blue Pokedex</h1>
+  <h1 style="text-align:center;">Pok&eacute;mon Red/Blue Pokedex</h1>
+
 
 <div ng-controller="MainController as main" class="container">
 
+  <p>Welcome to the Pok&eacute;dex app! Below you can view your caught Pok&eacute;mon stats,
+    and see the stats for other Pok&eacute;mon that can be caught in Red, Blue and Yellow.
+  </p>
+  <p>Notes: Pok&eacute;dex numbers based on National Pok&eacute;dex. Pokemon gifs are from Gen V, and pngs in the info boxes are from Gen VI. Movesets are limited to moves available in Gen I. Evolutionary chains are based on Gen I/II. Displaying National Pok&eacute;dex from 1 to 151. Due to unique nature of stats in Gen I, stats are based on Gen II.</p>
+
   <div class="container party-cont">
     <div class="row">
-      <div class="party-box" ng-class="{'col-lg-7 col-md-7 col-xs-7':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12':!main.isPokemonChosen}">
+      <div ng-class="{'col-lg-7 col-md-7 col-xs-7 party-box-tall':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12 party-box-wide':!main.isPokemonChosen}">
       <!-- <div class="party-box" class="col-lg-7 col-md-7 col-xs-7"> -->
-      <div class="col-lg-1 col-md-1" style="max-width:80px;" ng-repeat="pokemon in main.caught_pokemon" ng-if="pokemon.name !== undefined">
+      <h1 id="party-box-title">Party Pokemon</h1>
+    <div ng-class="{'poke-wrapper-tall':main.isPokemonChosen, 'poke-wrapper-wide':!main.isPokemonChosen}">
+      <div class="" style="width:45px;display:inline-block;margin:10px;" ng-repeat="pokemon in main.caught_pokemon" ng-if="pokemon.name !== undefined">
 
-          <!-- <img ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num)" /> -->
-          <div style="overflow:auto;width:25px;">
-            <img src="assets/pokeball.png" ng-click="main.showInfoBox(pokemon.dex_num)" />
-            {{pokemon.name}}
-          </div>
+
+            <!-- <img src="assets/pokeball.png" ng-click="main.showInfoBox(pokemon.dex_num)" /> -->
+            <img class="pokebox-gif" ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num)" />
+
       </div>
+    </div>
     </div>
     <div id="add-info" ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }">
     <!-- <div class="info-box col-lg-5 col-md-5 col-xs-5">
@@ -80,7 +88,7 @@ stats are based on Gen II.
         </li>
       </ul>
     </div> -->
-    <!-- </div> -->
+    </div>
     </div><!--/.row-->
   </div>
 

@@ -45,6 +45,7 @@ this.clickedPokeCount = 0;
 this.clickedPokemon = [];
 
 //shows pokemon party info box based on if a pokemon in the party was clicked
+//passing in clickedPoke as an integer
 this.showInfoBox = function(clickedPoke){
 
   // console.log("CLICK:");
@@ -190,13 +191,13 @@ this.printMoves = function(moveSet){
   return allMoves;
 }
 
-this.printEvolut = function(givenDexNums, givenName){
+this.printEvolut = function(givenDexNums){
   // console.log("print evolut");
   var totalEvolut = "";
 
   //console.log("start printevolut with " + givenDexNums.length);
   //loop through given array of types
-  for(var i=0; i<givenDexNums.length; i++){
+  for(var i = 0; i < givenDexNums.length; i++){
     nextDexNum = givenDexNums[i];
     // console.log("Given Name: " + givenName);
     // console.log("All: " + givenDexNums);
