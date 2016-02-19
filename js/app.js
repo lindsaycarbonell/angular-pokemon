@@ -7,6 +7,7 @@ this.all_pokemon = [];
 this.caught_pokemon = [];
 this.pokemon_moves = [];
 
+/****** DATA CALLS ******/
 
 $http.get('js/pokedex.json')
     .success(function(allPokemonData){
@@ -37,13 +38,7 @@ $http.get('js/movedex.json')
       //console.log("pokemonMoveData" + pokemonMoveData);
     });
 
-// this.isMobileShown = false;
-//
-// if(document.getElementsByClassName('.mobile-only').style.display == "none"){
-//   this.isMobileShown = true;
-// } else {
-//   this.isMobileShown = false;
-// }
+
 
 this.isPokemonChosen = false;
 this.chosenPartyPoke = null;
@@ -51,11 +46,14 @@ this.clickedPokeCount = 0;
 
 this.clickedPokemon = [];
 
-//shows pokemon party info box based on if a pokemon in the party was clicked
-//passing in clickedPoke as an integer
-this.showInfoBox = function(clickedPoke, isMobile){
 
-  // console.log("CLICK:");
+/**Function showInfoBox
+/**Purpose: decide whether to show the pokemon info box
+/**Receives: the index of the clicked pokemon, boolean to check if mobile
+/**Returns: nothing (calls generateInfoBox)
+**/
+
+this.showInfoBox = function(clickedPoke, isMobile){
 
   //push the clicked pokemon into an array
   this.clickedPokemon.push(clickedPoke);
@@ -63,12 +61,6 @@ this.showInfoBox = function(clickedPoke, isMobile){
   //get the previously clicked pokemon
   this.previousPokemon = this.clickedPokemon[this.clickedPokemon.length-2];
   this.isPreviousExists = this.clickedPokemon.length >= 2;
-
-  // console.log("you clicked on: " + clickedPoke);
-  // console.log("previously you clicked on: " + this.previousPokemon);
-  // console.log("isPokemonChosen: " + this.isPokemonChosen);
-
-  // this.clickedPokeCount++;
   this.chosenPartyPoke = clickedPoke;
 
   //if statement to overcome problem of box closing and not showing new pokemon data
@@ -78,22 +70,19 @@ this.showInfoBox = function(clickedPoke, isMobile){
 
   this.isPokemonChosen = !this.isPokemonChosen;
 
-  // console.log("automatically switch to: " + this.isPokemonChosen);
-  // console.log("isPokemonChosen: " + this.isPokemonChosen);
-
+  //send chosen pokemon and boolean to generate the info box
   this.generateInfoBox(this.chosenPartyPoke, isMobile);
 }
 
+/**Function generateInfoBox
+/**Purpose: print the info box of the selected pokemon
+/**Receives: the index of the clicked pokemon, boolean to check if mobile
+/**Returns: nothing (appends the HTML directly)
+**/
+
 this.generateInfoBox = function(chosenPoke, isMobile){
 
-  //console.log("generate");
-
-
-  console.log("sending in from generateInfoBox: " + chosenPoke);
   this.pokemonPath = this.getPokemonPathCaught(chosenPoke);
-
-  // console.log("path: " + this.pokemonPath.n_name);
-  console.log("move set: " + this.pokemonPath.move_set);
 
   if(isMobile){
     document.getElementById("add-info-mobile").innerHTML = '<div class="row"><div class="col-xs-5 col-xs-offset-3" style="margin-left:30%!important;"><div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.getN_Name() + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell-mobile" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="level-cell">Lv' +  this.pokemonPath.current_lvl + '</span></div></div><ul class="move-box mobile-fix">' + this.printMoves(this.pokemonPath.move_set) +  '</ul></div></div>';
@@ -101,14 +90,18 @@ this.generateInfoBox = function(chosenPoke, isMobile){
 
   document.getElementById("add-info").innerHTML = '<div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.getN_Name() + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="level-cell">Lv' +  this.pokemonPath.current_lvl + '</span></div></div><ul class="move-box">' + this.printMoves(this.pokemonPath.move_set) +  '</ul>';
 
+  }
+
 }
 
-  // console.log(this.chosenPartyPoke);
-}
 
-
+/**Function getN_Name
+/**Purpose: retrieve n_name if one exists
+/**Receives: nothing
+/**Returns: HTML for n_name or empty <span>
+**/
 this.getN_Name = function(){
-  console.log("nick name: " + this.pokemonPath.n_name);
+
   if(this.pokemonPath.n_name){
 
     return  '<span class="nick-cell">/&#8220;' + this.pokemonPath.n_name + '&#8221;</span>';
@@ -117,12 +110,14 @@ this.getN_Name = function(){
 
 }
 
-
-//printTypes takes the types for a given pokemon and prints out
-//the stylized type boxes into the Pokedex table
+/**Function printTypes
+/**Purpose: style the pokemon type boxes
+/**Receives: givenTypes as an array
+/**Returns: totalType, a collection of HTML with all appropriate <div>s
+**/
 
 this.printTypes = function(givenTypes){
-// console.log("print types");
+
   var allTypes = [
     "normal",
     "fire",
@@ -169,9 +164,15 @@ var totalType = "";
 
 }
 
+/**Function printMoves
+/**Receives: moveSet as an integer array
+/**Returns: allMoves, a collection of HTML with all appropriate <li>s
+**/
+
 this.printMoves = function(moveSet){
   var allMoves = "";
 
+  //Pokemon can only have a max of 4 moves
   for(var i = 0; i < 4; i++){
 
     for(var j = 0; j < this.pokemon_moves.length; j++){
@@ -186,6 +187,11 @@ this.printMoves = function(moveSet){
   }
   return allMoves;
 }
+
+/**Function printEvolut
+/**Receives: givenDexNums as an integer array
+/**Returns: totalEvolut, a collection of HTML with all appropriate <p>s
+**/
 
 this.printEvolut = function(givenDexNums){
 
@@ -203,7 +209,12 @@ this.printEvolut = function(givenDexNums){
   return totalEvolut;
 }
 
-//function to fix the issue of improperly indexed JSON files
+/**Function getPokemonPathAll
+/**Purpose: fixes the issue of improperly indexed JSON files
+/**Receives: nextDexNum as an integer
+/**Returns: this.all_pokemon[i], the matching pokemon
+**/
+
 this.getPokemonPathAll = function(nextDexNum){
 
   for (var i = 0; i < this.all_pokemon.length; i++){
@@ -216,6 +227,7 @@ this.getPokemonPathAll = function(nextDexNum){
 
 }
 
+/*same as getPokemonPathAll but for caught pokemon*/
 this.getPokemonPathCaught = function(nextDexNum){
 
   for (var i = 0; i < this.caught_pokemon.length; i++){
@@ -228,6 +240,7 @@ this.getPokemonPathCaught = function(nextDexNum){
 
 }
 
+/*same but for moves*/
 this.getMovePath = function(moveName){
 
   for (var i = 0; i < this.pokemon_moves.length; i++){
@@ -237,16 +250,6 @@ this.getMovePath = function(moveName){
     }
 
   }
-
-}
-
-this.setCaught = function(){
-
-  $('.checkbox').change(function(){
-    console.log("checkbox changed!");
-    // var c = this.checked ? '#f00' : '#09f';
-    // $('p').css('color', c);
-  });
 
 }
 

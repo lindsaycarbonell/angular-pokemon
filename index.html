@@ -6,26 +6,25 @@ stats are based on Gen II.
 http://www.spriters-resource.com/ds/pokemonblackwhite2/sheet/48041/
 http://wallpoper.com/images/00/38/40/79/pokemon-clouds_00384079.png
 http://www.epidemicjohto.com/t882-type-colors-hex-colors
-***Need to add exception for Eevee, #135*** -->
+-->
 <html>
+
 <head>
 
-<title>Pokemon Red/Blue (Gen I) Pokedex</title>
-<link rel="shortcut icon" type="image/ico" href="assets/pokedex.ico" />
-<script src="js/jquery-2.2.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+	<title>Pokemon Red/Blue (Gen I) Pokedex</title>
+	<link rel="shortcut icon" type="image/ico" href="assets/pokedex.ico" />
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
-<!--angular js-->
-<script src="js/angular.js"></script>
-<script src="js/app.js"></script>
-<script src="js/angular-sanitize.min.js"></script>
-<!--stylesheets-->
-<link rel="stylesheet" href="css/bootstrap.css">
-
-<!--for some reason Font Awesome only works with the CDN-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="css/style.css" />
+	<!--angular js-->
+	<script src="js/angular.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/angular-sanitize.min.js"></script>
+	<!--stylesheets-->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!--for some reason Font Awesome only works with the CDN-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css" />
 
 </head>
 
@@ -34,55 +33,54 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
   <div class="non-semantic-protector"><h1 class="ribbon"><span class="ribbon-content">Pok&eacute;mon Red/Blue Pok&eacute;dex</span></h1></div>
 
 
-
 <div class="container">
 
   <p>Welcome to the Pok&eacute;dex app! Below you can view your caught Pok&eacute;mon stats,
     and see the stats for other Pok&eacute;mon that can be caught in Red, Blue and Yellow.
   </p>
   <p>Notes: Pok&eacute;dex numbers based on National Pok&eacute;dex. Pokemon gifs are from Gen V, and pngs in the info boxes are from Gen VI. Movesets are limited to moves available in Gen I. Evolutionary chains are based on Gen I/II. Displaying National Pok&eacute;dex from 1 to 151. Due to unique nature of stats in Gen I, stats are based on Gen II.</p>
+
 <div class="desktop-only">
   <div class="container party-cont">
     <div class="row">
       <div ng-class="{'col-lg-7 col-md-7 col-xs-7 party-box-tall':main.isPokemonChosen, 'col-lg-12 col-md-12 col-xs-12 party-box-wide':!main.isPokemonChosen}">
-      <!-- <div class="party-box" class="col-lg-7 col-md-7 col-xs-7"> -->
-      <h1 id="party-box-title">Party Pokemon</h1>
-    <div ng-class="{'poke-wrapper-tall':main.isPokemonChosen, 'poke-wrapper-wide':!main.isPokemonChosen}">
-      <div class="" style="display:inline-block;margin:10px;" ng-repeat="pokemon in main.caught_pokemon" ng-if="pokemon.name !== undefined">
 
+				<h1 id="party-box-title">Party Pokemon</h1>
 
-            <!-- <img src="assets/pokeball.png" ng-click="main.showInfoBox(pokemon.dex_num)" /> -->
-            <img class="pokebox-gif" ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num, false)" ng-class="{'select-poke':main.chosenPartyPoke == pokemon.dex_num && main.isPokemonChosen}"/>
+    		<div ng-class="{'poke-wrapper-tall':main.isPokemonChosen, 'poke-wrapper-wide':!main.isPokemonChosen}">
+			  	<div class="party-box-indiv" ng-repeat="pokemon in main.caught_pokemon" ng-if="pokemon.name !== undefined">
 
-      </div>
-    </div>
-    </div>
-    <div id="add-info" ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }">
+			    	<img class="pokebox-gif" ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num, false)" ng-class="{'select-poke':main.chosenPartyPoke == pokemon.dex_num && main.isPokemonChosen}"/>
 
-    </div>
+			  	</div><!--/.party-box-indiv-->
+    		</div><!--/.poke-wrapper-->
+			</div><!--/.party-box-->
+
+	    <div id="add-info" ng-show="main.isPokemonChosen" ng-class="{ 'col-lg-5 col-md-5 col-xs-5':main.isPokemonChosen }"></div>
+
     </div><!--/.row-->
-  </div>
+  </div><!--/.party-cont-->
 </div><!--/.desktop-only-->
 
 <!--MOBILE-->
 <div class="mobile-only">
 	<div class="container-fluid">
 
-		<h4 style="text-align:center;background-color:#986794;padding:10px;color:white;">Currently in your party:</h4>
+		<h4 class="purple-title">Currently in your party:</h4>
 
 		<div class="row">
 
 			<div class="poke-lister col-xs-4" ng-repeat="pokemon in main.caught_pokemon" ng-click="main.showInfoBox(pokemon.dex_num, true)" data-toggle="modal" data-target="{{'#modal-' + pokemon.dex_num}}">
-			{{pokemon.name}}
-			<br>
-			<span style="font-size:10pt;display:inline;">(click for more)</span>
+				{{pokemon.name}}
+				<br>
+				<span class="click-for-more">(click for more)</span>
 			</div>
 
 		</div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="{{'modal-' + main.chosenPartyPoke | lowercase}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- MODAL -->
+<div class="modal fade" id="{{'modal-' + main.chosenPartyPoke | lowercase}}" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -90,31 +88,27 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
         <h4 class="modal-title">{{pokemon.name}}</h4>
       </div>
       <div class="modal-body">
-				<div id="add-info-mobile">
-		    </div>
+				<div id="add-info-mobile"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
       </div>
     </div>
   </div>
-</div>
+</div><!--./modal-->
 
 
 
 
 
-</div>
+</div><!--/.container-fluid-->
 </div><!--/.mobile-only-->
 
 <hr>
 <br>
 
 
-<h4 style="text-align:center;background-color:#986794;padding:10px;color:white;">Full Pokedex:</h4>
-
-
+<h4 class="purple-title">Full Pokedex:</h4>
 
 
 <!--TABLE-->
@@ -122,7 +116,7 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
   <table id="poke-table" class="table">
     <thead>
       <th ng-click="main.setSort('dex_num')">Dex Number <i class="fa fa-arrows-v"></i></th>
-      <th></th>
+      <th><!--gif--></th>
       <th ng-click="main.setSort('name')">Name</th>
       <th>Caught</th>
       <th>Types</th>
@@ -161,10 +155,10 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
     </tr>
 
   </table>
-</div>
-</div>
+</div><!--/.table-responsive-->
+</div><!--/.container (main) -->
 
-<footer style="bottom:0;margin-top:400px;margin-bottom:15px;">
+<footer>
   <div class="container" style="text-align:center;">
 By <a href="http://lmcarbonell.com/">Lindsay Carbonell</a>, 2016. Pok&eacute;dex information and .pngs obtained from <a href=
 "http://serebii.net/">Serebii</a>.
