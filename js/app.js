@@ -20,11 +20,11 @@ $http.get('js/pokedex.json')
 $http.get('js/caught.json')
     .success(function(caughtPokemonData){
       _this.caught_pokemon = caughtPokemonData;
-      console.log("caught: " + caughtPokemonData[8].name);
+
     })
     .error(function(msg){
       console.log("Caught request failed. \n" + msg);
-      console.log("caughtPokemonData" + caughtPokemonData);
+
     });
 
 $http.get('js/movedex.json')
@@ -118,18 +118,13 @@ this.generateInfoBox = function(chosenPoke){
 this.getN_Name = function(){
   console.log("nick name: " + this.pokemonPath.n_name);
   if(this.pokemonPath.n_name){
-    console.log("about to return a name");
+
     return  '<span class="nick-cell">/&#8220;' + this.pokemonPath.n_name + '&#8221;</span>';
   }
   else return '<span style="padding-right:20px;"></span>';
 
 }
 
-this.showHighlight = function(dex_num){
-  if(this.chosenPartyPoke == dex_num && document.getElementById('add-info').style.visibility == "visible"){
-    return true;
-  }
-}
 
 //printTypes takes the types for a given pokemon and prints out
 //the stylized type boxes into the Pokedex table
@@ -170,9 +165,7 @@ var totalType = "";
 
 
       if(givenType.localeCompare(compareType)==0){
-        //console.log("This pokemon is a " + allTypes[j] + " type.");
 
-        // totalType += "<div style='font-style:bold;background-color:" + allColors[j] + ";'>" + allTypes[j] + "</div>";
         totalType += "<div class='type " + allTypes[j] + "'>" + allTypes[j] + "</div>";
 
       }
@@ -185,20 +178,14 @@ var totalType = "";
 }
 
 this.printMoves = function(moveSet){
-  console.log("print moves!");
   var allMoves = "";
 
   for(var i = 0; i < 4; i++){
-    // console.log("i loop");
 
     for(var j = 0; j < this.pokemon_moves.length; j++){
-      // console.log("j loop");
-      //console.log(moveSet[i]);
-      //console.log(this.pokemon_moves[j]);
 
       if(moveSet[i].localeCompare(this.pokemon_moves[j].name) == 0){
-        // console.log("ready to return");
-        // console.log(this.pokemon_moves[j].type);
+
         allMoves += '<li class="move-cell"><span class="move-cell-type type ' + this.pokemon_moves[j].type + '">' + this.pokemon_moves[j].type + '</span><span>' + this.pokemon_moves[j].name + '</li>';
 
       }
@@ -209,17 +196,13 @@ this.printMoves = function(moveSet){
 }
 
 this.printEvolut = function(givenDexNums){
-  // console.log("print evolut");
+
   var totalEvolut = "";
 
-  //console.log("start printevolut with " + givenDexNums.length);
   //loop through given array of types
   for(var i = 0; i < givenDexNums.length; i++){
     this.nextDexNum = givenDexNums[i];
-    // console.log("Given Name: " + givenName);
-    // console.log("All: " + givenDexNums);
-    // console.log("Next: " + nextDexNum + " "+this.all_pokemon[nextDexNum-1].name);
-    // console.log("sending in from printEvolut: " + nextDexNum);
+
     this.pokemonPath = this.getPokemonPathAll(this.nextDexNum);
 
     totalEvolut += "<p>" + this.pokemonPath.name + "</p>";
@@ -230,12 +213,10 @@ this.printEvolut = function(givenDexNums){
 
 //function to fix the issue of improperly indexed JSON files
 this.getPokemonPathAll = function(nextDexNum){
-  // console.log("get path where nextDexNum = " + nextDexNum);
 
   for (var i = 0; i < this.all_pokemon.length; i++){
 
     if (nextDexNum == this.all_pokemon[i].dex_num){
-      // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
       return this.all_pokemon[i];
     }
 
@@ -244,12 +225,10 @@ this.getPokemonPathAll = function(nextDexNum){
 }
 
 this.getPokemonPathCaught = function(nextDexNum){
-  // console.log("get path where nextDexNum = " + nextDexNum);
 
   for (var i = 0; i < this.caught_pokemon.length; i++){
 
     if (nextDexNum == this.caught_pokemon[i].dex_num){
-      // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
       return this.caught_pokemon[i];
     }
 
@@ -258,14 +237,10 @@ this.getPokemonPathCaught = function(nextDexNum){
 }
 
 this.getMovePath = function(moveName){
-  // console.log("get path where nextDexNum = " + nextDexNum);
 
   for (var i = 0; i < this.pokemon_moves.length; i++){
 
-    //givenType.localeCompare(compareType)==0
-
     if (moveName.localeCompare(this.pokemon_moves[i].name) === 0){
-      // console.log("this is being returned: " + this.all_pokemon[nextDexNum-1].name);
       return this.pokemon_moves[i];
     }
 
