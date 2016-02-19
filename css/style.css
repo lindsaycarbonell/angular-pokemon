@@ -380,3 +380,25 @@ a.subtle:hover {
     border-color: #A99890;
     color: #F5F4F5;
 }
+
+
+
+/*media queries*/
+
+.poke-lister{
+  padding:10px;
+  text-align:center;
+  font-size:15pt;
+}
+
+@media (max-width: 1029px){
+  .desktop-only{
+    display:none;
+  }
+}
+
+@media (min-width: 1029px){
+  .mobile-only{
+    display:none;
+  }
+}
