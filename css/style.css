@@ -46,7 +46,7 @@ body:hover, table:hover, div:hover{
   display:table;
 }
 
-div#add-info{
+div.add-info{
   height:400px;
 }
 
@@ -390,6 +390,16 @@ a.subtle:hover {
   text-align:center;
   font-size:15pt;
 }
+
+.mobile-fix > li{
+  margin-left:-7%;
+  background-color:#d3d3d3;
+}
+
+.img-cell-mobile{
+  margin-left: -20%;
+}
+
 
 @media (max-width: 1029px){
   .desktop-only{

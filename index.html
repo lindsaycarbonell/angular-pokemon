@@ -50,7 +50,7 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
 
 
             <!-- <img src="assets/pokeball.png" ng-click="main.showInfoBox(pokemon.dex_num)" /> -->
-            <img class="pokebox-gif" ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num)" ng-class="{'select-poke':main.chosenPartyPoke == pokemon.dex_num && main.isPokemonChosen}"/>
+            <img class="pokebox-gif" ng-src="assets/{{pokemon.dex_num}}.gif" ng-click="main.showInfoBox(pokemon.dex_num, false)" ng-class="{'select-poke':main.chosenPartyPoke == pokemon.dex_num && main.isPokemonChosen}"/>
 
       </div>
     </div>
@@ -70,19 +70,47 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
 
 		<div class="row">
 
-			<div class="poke-lister col-xs-4" ng-repeat="pokemon in main.caught_pokemon">
+			<div class="poke-lister col-xs-4" ng-repeat="pokemon in main.caught_pokemon" ng-click="main.showInfoBox(pokemon.dex_num, true)" data-toggle="modal" data-target="{{'#modal-' + pokemon.dex_num}}">
 			{{pokemon.name}}
 			<br>
-			<span style="font-size:10pt;display:inline;">click for more</span>
+			<span style="font-size:10pt;display:inline;">(click for more)</span>
 			</div>
 
 		</div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="{{'modal-' + main.chosenPartyPoke | lowercase}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{pokemon.name}}</h4>
+      </div>
+      <div class="modal-body">
+				<div id="add-info-mobile">
+		    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
 </div><!--/.mobile-only-->
 
+<hr>
+<br>
 
 
-
+<h4 style="text-align:center;background-color:#986794;padding:10px;color:white;">Full Pokedex:</h4>
 
 
 
@@ -91,19 +119,19 @@ http://www.epidemicjohto.com/t882-type-colors-hex-colors
 <div class="table-responsive">
   <table id="poke-table" class="table">
     <thead>
-      <th ng-click="main.setSort('dex_num')">Dex Number</th>
+      <th ng-click="main.setSort('dex_num')">Dex Number <i class="fa fa-arrows-v"></i></th>
       <th></th>
       <th ng-click="main.setSort('name')">Name</th>
       <th>Caught</th>
       <th>Types</th>
       <th ng-click="main.setSort('location')">Location</th>
       <th>Evolutionary Chain</th>
-      <th ng-click="main.setSort('base_hp')">Base HP</th>
-      <th ng-click="main.setSort('base_atk')">Base Attack</th>
-      <th ng-click="main.setSort('base_def')">Base Defense</th>
-      <th ng-click="main.setSort('base_spdef')">Base Special Defense</th>
-      <th ng-click="main.setSort('base_spatk')">Base Special Attack</th>
-      <th ng-click="main.setSort('base_speed')">Base Speed</th>
+      <th ng-click="main.setSort('base_hp')">Base HP <i class="fa fa-arrows-v"></i></th>
+      <th ng-click="main.setSort('base_atk')">Base Attack <i class="fa fa-arrows-v"></i></th>
+      <th ng-click="main.setSort('base_def')">Base Defense <i class="fa fa-arrows-v"></i></th>
+      <th ng-click="main.setSort('base_spdef')">Base Special Defense <i class="fa fa-arrows-v"></i></th>
+      <th ng-click="main.setSort('base_spatk')">Base Special Attack <i class="fa fa-arrows-v"></i></th>
+      <th ng-click="main.setSort('base_speed')">Base Speed <i class="fa fa-arrows-v"></i></th>
     </thead>
 
     <tr ng-repeat="pokemon in main.all_pokemon | orderBy:main.sort:main.direction"

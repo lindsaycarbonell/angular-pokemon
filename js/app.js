@@ -37,6 +37,13 @@ $http.get('js/movedex.json')
       //console.log("pokemonMoveData" + pokemonMoveData);
     });
 
+// this.isMobileShown = false;
+//
+// if(document.getElementsByClassName('.mobile-only').style.display == "none"){
+//   this.isMobileShown = true;
+// } else {
+//   this.isMobileShown = false;
+// }
 
 this.isPokemonChosen = false;
 this.chosenPartyPoke = null;
@@ -46,7 +53,7 @@ this.clickedPokemon = [];
 
 //shows pokemon party info box based on if a pokemon in the party was clicked
 //passing in clickedPoke as an integer
-this.showInfoBox = function(clickedPoke){
+this.showInfoBox = function(clickedPoke, isMobile){
 
   // console.log("CLICK:");
 
@@ -74,12 +81,13 @@ this.showInfoBox = function(clickedPoke){
   // console.log("automatically switch to: " + this.isPokemonChosen);
   // console.log("isPokemonChosen: " + this.isPokemonChosen);
 
-  this.generateInfoBox(this.chosenPartyPoke);
+  this.generateInfoBox(this.chosenPartyPoke, isMobile);
 }
 
-this.generateInfoBox = function(chosenPoke){
+this.generateInfoBox = function(chosenPoke, isMobile){
 
   //console.log("generate");
+
 
   console.log("sending in from generateInfoBox: " + chosenPoke);
   this.pokemonPath = this.getPokemonPathCaught(chosenPoke);
@@ -87,29 +95,13 @@ this.generateInfoBox = function(chosenPoke){
   // console.log("path: " + this.pokemonPath.n_name);
   console.log("move set: " + this.pokemonPath.move_set);
 
+  if(isMobile){
+    document.getElementById("add-info-mobile").innerHTML = '<div class="row"><div class="col-xs-5 col-xs-offset-3" style="margin-left:30%!important;"><div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.getN_Name() + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell-mobile" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="level-cell">Lv' +  this.pokemonPath.current_lvl + '</span></div></div><ul class="move-box mobile-fix">' + this.printMoves(this.pokemonPath.move_set) +  '</ul></div></div>';
+  } else{
+
   document.getElementById("add-info").innerHTML = '<div style="display:table-row;"><span class="name-cell">' + this.pokemonPath.name + '</span>' + this.getN_Name() + this.printTypes(this.pokemonPath.types) + '</span></div><div style="width:inherit;margin-left:20%;margin-bottom:3%;"><img class="img-cell" src="assets/' + this.pokemonPath.dex_num + '.png" /><div style="display:table-row"><span class="level-cell">Lv' +  this.pokemonPath.current_lvl + '</span></div></div><ul class="move-box">' + this.printMoves(this.pokemonPath.move_set) +  '</ul>';
 
-
-
-//       <span>Fury Cutter</span>
-//     </li>
-//
-//     <li class="move-cell">
-//       <span class="move-cell-type type grass">Grass</span>
-//       <span>Magical Leaf</span>
-//     </li>
-//     <li class="move-cell">
-//       <span class="move-cell-type type grass">Grass</span>
-//       <span>Absorb</span>
-//     </li>
-//     <li class="move-cell">
-//         <span class="move-cell-type type normal">Normal</span>
-//         <span>Cut</span>
-//     </li>
-//   </ul>
-// </div>
-
-
+}
 
   // console.log(this.chosenPartyPoke);
 }
