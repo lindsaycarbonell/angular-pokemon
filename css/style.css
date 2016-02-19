@@ -1,8 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic);
 
-/*DOM Elements*/
+
 body{
   font-family:'Ubuntu';
+  /*background-image: url('../assets/poke_clouds.png'), url('../assets/poke_grass.png');
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;*/
   background-image: url('../assets/poke_clouds.png'), url('../assets/poke_bottom.png');
   background-position: top, bottom;
   background-repeat: no-repeat;
@@ -11,15 +14,10 @@ body{
 body:hover, table:hover, div:hover{
   cursor:default;
 }
-footer{
-  bottom:0;
-  margin-top:400px;
-  margin-bottom:15px;
-}
 
-/*poke-box*/
 .pokebox-gif{
   vertical-align:bottom;
+  /*border-bottom:1px solid black;*/
 }
 
 .pokebox-gif:hover{
@@ -32,6 +30,13 @@ footer{
 
 .select-poke:hover{
   border-bottom:3px solid white;!important
+}
+
+.vert-centered {
+  display: table-cell;
+  /*vertical-align: middle;*/
+  overflow: scroll;
+
 }
 
 .info-box{
@@ -51,9 +56,15 @@ div.add-info{
 .img-cell{
   margin-left:-5%;
   padding: 20px;
+  /*background-color: white;*/
+  /*border-radius: 50%;
+	width: 200px;
+	height: 200px;*/
 }
 
 .name-cell{
+  /*text-align:center;*/
+
   display:table-cell;
   vertical-align: text-bottom;
   font-size:15pt;
@@ -100,9 +111,15 @@ div.add-info{
   vertical-align:text-bottom;
 }
 
+
+
+
 .party-box-wide, .party-box-tall{
   background-image: url('../assets/grass_txt.png');
   border: 3px solid #78a068;
+
+  /*background-color:#999;*/
+  /*transition: all 0.3s;*/
 }
 
 .party-box-wide{
@@ -142,33 +159,23 @@ div.add-info{
   padding:10px;
 }
 
-.party-box-indiv{
-  display:inline-block;
-  margin:10px;
-}
-
-.purple-title{
-  text-align:center;
-  background-color:#986794;
-  padding:10px;
-  color:white;
-}
-
-
-/*CSS for ribbon (https://css-tricks.com/snippets/css/ribbon/)*/
+/*CSS for ribbon*/
 
 .non-semantic-protector { position: relative; z-index: 1; }
 
 .ribbon {
  font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
  width: 50%;
+
  position: relative;
  background: #ba89b6;
  color: #fff;
  text-align: center;
- padding: 1em 2em;
- margin: 2em auto 3em;
-
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
 .ribbon:before, .ribbon:after {
  content: "";
  position: absolute;
@@ -177,19 +184,16 @@ div.add-info{
  border: 1.5em solid #986794;
  z-index: -1;
 }
-
 .ribbon:before {
  left: -2em;
  border-right-width: 1.5em;
  border-left-color: transparent;
 }
-
 .ribbon:after {
  right: -2em;
  border-left-width: 1.5em;
  border-right-color: transparent;
 }
-
 .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
  content: "";
  position: absolute;
@@ -198,12 +202,10 @@ div.add-info{
  border-color: #804f7c transparent transparent transparent;
  bottom: -1em;
 }
-
 .ribbon .ribbon-content:before {
  left: 0;
  border-width: 1em 0 0 1em;
 }
-
 .ribbon .ribbon-content:after {
  right: 0;
  border-width: 1em 1em 0 0;
@@ -381,7 +383,7 @@ a.subtle:hover {
 
 
 
-/*mobile*/
+/*media queries*/
 
 .poke-lister{
   padding:10px;
@@ -396,11 +398,6 @@ a.subtle:hover {
 
 .img-cell-mobile{
   margin-left: -20%;
-}
-
-.click-for-more{
-  font-size:10pt;
-  display:inline;
 }
 
 
