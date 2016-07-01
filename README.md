@@ -1,5 +1,4 @@
-# j583-project1
-Pokemon Angular Project
+# Pokemon Angular Project
 This is a Pokemon database project built with AngularJS and HTML/CSS.
 
 # Installation
